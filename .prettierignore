@@ -1,3 +1,5 @@
-*.hbs
 *.md
 *.json
+*.hbs
+build
+static

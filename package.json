@@ -4,7 +4,7 @@
   "scripts": {
     "stacy:serve": "stacy serve",
     "stacy:build": "stacy generate",
-    "webpack:dev": "webpack --config webpack.dev.js",
+    "webpack:dev": "webpack --config webpack.dev.js --watch --progress",
     "webpack:watch": "chokidar 'src/scss/**/*.scss' 'src/js/**/*.js' -c 'npm run webpack:dev'",
     "webpack:build": "webpack --config webpack.prod.js",
     "env:create": "node create-env.js",
@@ -14,8 +14,8 @@
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
-    "stylelint:check": "stylelint '**/*.scss'",
-    "stylelint:fix": "stylelint '**/*.scss' --fix",
+    "stylelint:check": "stylelint src/scss/**/*.scss",
+    "stylelint:fix": "stylelint src/scss/**/*.scss --fix",
     "prepare": "husky install"
   },
   "devDependencies": {

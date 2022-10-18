@@ -1,6 +1,23 @@
 // Add the color palette according to the site design
 :root {
+  // Brand Colors
+  --brand-blue: #3777bc;
+  --brand-green: #50b848;
+  --brand-magenta: #ed0677;
+  --brand-navy: #08152e;
+  --brand-orange: #faa61a;
+  --brand-purple: #524fa1;
+
+  // Secondary Colors
   --black: #000;
-  --red: #e60012;
+  --grey-1: #3c4456;
+  --grey-2: #576684;
+  --grey-3: #8793ab;
+  --grey-4: #b0b8c8;
+  --grey-5: #d5d9e0;
+  --grey-6: #f3f4f4;
   --white: #fff;
+
+  // Font Family
+  --font-red-hat-display: 'Red Hat Display', sans-serif;
 }
