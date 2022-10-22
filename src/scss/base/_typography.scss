@@ -1,1 +1,113 @@
-// Add the typography defined for the project in the designs
+// Headings
+.heading-1 {
+  font-size: 5.6rem;
+  font-weight: var(--font-bold);
+  line-height: 6.4rem;
+}
+
+.heading-2 {
+  font-size: 4.8rem;
+  font-weight: var(--font-bold);
+  line-height: 5.6rem;
+}
+
+.heading-3 {
+  font-size: 4rem;
+  font-weight: var(--font-bold);
+  line-height: 4.8rem;
+}
+
+.heading-4 {
+  font-size: 3.2rem;
+  font-weight: var(--font-bold);
+  line-height: 4rem;
+}
+
+.heading-5 {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  line-height: 2.8rem;
+}
+
+.heading-6 {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  line-height: 2.4rem;
+}
+
+// Body
+.body-xl-reg {
+  font-size: 2rem;
+  font-weight: var(--font-reg);
+  line-height: 3.2rem;
+}
+
+.body-xl-med {
+  font-size: 2rem;
+  font-weight: var(--font-med);
+  line-height: 3.2rem;
+}
+
+.body-xl-bold {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  line-height: 3.2rem;
+}
+
+.body-l-reg {
+  font-size: 1.8rem;
+  font-weight: var(--font-reg);
+  line-height: 2.8rem;
+}
+
+.body-l-bold {
+  font-size: 1.8rem;
+  font-weight: var(--font-bold);
+  line-height: 2.8rem;
+}
+
+.body-m-reg {
+  font-size: 1.6rem;
+  font-weight: var(--font-reg);
+  line-height: 2.4rem;
+}
+
+.body-m-bold {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  line-height: 2.4rem;
+}
+
+.body-s-reg {
+  font-size: 1.4rem;
+  font-weight: var(--font-reg);
+  line-height: 2rem;
+}
+
+.body-s-bold {
+  font-size: 1.4rem;
+  font-weight: var(--font-bold);
+  line-height: 2rem;
+}
+
+// Eyebrow
+.eyebrow-typography {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.2em;
+  line-height: 1.6rem;
+}
+
+// Button
+.button-typography {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  line-height: 1.6rem;
+}
+
+// Link
+.link-typography {
+  font-size: 1.6rem;
+  font-weight: var(--font-med);
+  line-height: 1.6rem;
+}
