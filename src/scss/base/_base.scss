@@ -7,9 +7,8 @@ html {
 }
 
 body {
-  font-family: var(
-    --font-red-hat-display
-  ); // Add the font-family defined for the project in the designs
+  color: var(--brand-navy);
+  font-family: var(--font-red-hat-display);
 }
 
 img {
