@@ -1,0 +1,29 @@
+<div class="carousel">
+    <div class="container">
+
+        <div class="card-wrapper">
+          {{#each carouselSlides}}
+            {{{module this}}}
+          {{/each}}
+        </div>
+
+        <div class="card-control">
+          <div class="control-container">
+            <div class="control__arrow-back arrow">
+              <img src="https://images.ctfassets.net/du64va5sqssl/5LSqcnVAk4GIfJN0GK5RS/33366fa93eb1a67d021c853cd519cfe1/Arrow.svg" alt="">
+            </div>
+            <div class="control__arrow-for arrow">
+              <img src="https://images.ctfassets.net/du64va5sqssl/5LSqcnVAk4GIfJN0GK5RS/33366fa93eb1a67d021c853cd519cfe1/Arrow.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="card-indicators">
+          {{#each carouselSlides}}
+            <button class=""></button>
+          {{/each}}
+        </div>
+    </div>
+</div>
+
+
