@@ -1,0 +1,21 @@
+.hero {
+  &__main-container {
+    @include grid;
+  }
+
+  &__title {
+    @include col(1, 4);
+
+    @include breakpoint('lg') {
+      @include col(2, 5);
+    }
+  }
+
+  &__image {
+    @include col(1, 4);
+
+    @include breakpoint('lg') {
+      @include col(7, 5);
+    }
+  }
+}
