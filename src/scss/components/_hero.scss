@@ -1,14 +1,42 @@
 .hero {
   &__main-container {
     @include grid;
+
+    align-content: center;
   }
 
-  &__title {
+  &__sub-container {
     @include col(1, 4);
 
     @include breakpoint('lg') {
       @include col(2, 5);
+
+      position: relative;
+      align-self: center;
+      justify-self: center;
     }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    position: relative;
+    box-sizing: border-box;
+    background-color: grey;
+    border-radius: 100px;
+    height: 53px;
+    max-width: fit-content;
+    padding: 20px 32px;
+    color: var(--white);
+
+    /* .link {
+      @extend .button-typography;
+
+      color: var(--white);
+    } */
   }
 
   &__image {
@@ -16,6 +44,36 @@
 
     @include breakpoint('lg') {
       @include col(7, 5);
+
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+    }
+  }
+
+  /* &__sub-container ~ &__sub-container {
+    display: none;
+    position: absolute;
+    top: 0;
+  }
+
+  /* &__main-container > img ~ img {
+    display: none;
+    position: absolute;
+    top: 0;
+  } */
+
+  &__button {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__cta-container {
+    @include grid;
+  }
+
+  &__cta-sub-container {
+    @include breakpoint('lg') {
+      @include col(2, 9);
     }
   }
 }
