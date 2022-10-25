@@ -114,13 +114,13 @@
       }
 
       &:first-child {
-        /* .hero__cta {
+        .hero__cta {
           @include body-m-bold;
         }
 
         .hero__cta-border {
           display: block;
-        } */
+        }
       }
 
       &.active {
