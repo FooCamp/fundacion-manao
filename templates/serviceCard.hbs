@@ -1,0 +1,21 @@
+{{!-- service card --}}
+<div class="service-card bg-{{backgroundColor}}">
+      <div class="service-card__icon">
+        <img class="img-icon" src="{{assetSrc icon}}" alt="{{assetTitle icon}}">
+      </div>
+
+      <div class="service-card__title">
+        <h4>{{title}}</h4>
+      </div>
+
+      <div class="service-card__arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 49.9 49.6" style="enable-background:new 0 0 49.9 49.6;" xml:space="preserve">
+          <style type="text/css">
+            .st0{fill:#FFFFFF;}
+          </style>
+          <path class="st0" d="M24.9,0.8c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S38.2,0.8,24.9,0.8z M32.4,24.7c0,0.1,0,0.2,0,0.2  c0,0.1-0.1,0.1-0.1,0.2c0,0,0,0.1-0.1,0.1l-4.5,5c-0.2,0.2-0.5,0.3-0.7,0.3c-0.2,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1-0.1-1.4l3-3.3  H18.4c-0.6,0-1-0.4-1-1s0.4-1,1-1H29l-2.8-2.8c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l4.5,4.5c0.1,0.1,0.2,0.2,0.2,0.3  c0,0.1,0.1,0.2,0.1,0.4c0,0,0,0,0,0C32.4,24.6,32.4,24.6,32.4,24.7z"/>
+          </svg>
+      </div>
+      <a class="service-card__link" tile="{{title}}" href="{{ctaLink}}" target="{{#if isExternalLink}}_blank{{else}}_self{{/if}}"></a>
+</div>
+
