@@ -1,0 +1,26 @@
+.statistics {
+  @include grid;
+
+  &__eyebrow {
+    font-size: 16px;
+    grid-column: 1/9;
+    justify-content: center;
+    display: flex;
+
+    @include breakpoint(md) {
+      grid-column: 4/9;
+    }
+  }
+
+  &__headline {
+    grid-column: 1/9;
+    font-size: 40px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+
+    @include breakpoint(md) {
+      grid-column: 4/9;
+    }
+  }
+}
