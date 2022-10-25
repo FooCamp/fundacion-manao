@@ -1,11 +1,19 @@
 .statistics {
   @include grid;
 
+  background-color: var(--brand-navy);
+  margin: 0;
+
+  @include breakpoint(md) {
+    margin: 0;
+  }
+
   &__eyebrow {
     font-size: 16px;
     grid-column: 1/9;
     justify-content: center;
     display: flex;
+    color: #ffffff;
 
     @include breakpoint(md) {
       grid-column: 4/9;
@@ -18,9 +26,16 @@
     justify-content: center;
     display: flex;
     text-align: center;
+    color: #ffffff;
 
     @include breakpoint(md) {
       grid-column: 4/9;
     }
+  }
+
+  &__numbers {
+    grid-column: 1/12;
+    font-size: 120px;
+    color: var(--brand-magenta);
   }
 }
