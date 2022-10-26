@@ -1,0 +1,15 @@
+.h1 {
+  @include heading-1;
+}
+
+.eyebrow {
+  @include eyebrow-typography;
+}
+
+.container_person {
+  @include grid;
+}
+
+.description {
+  @include body-l-reg;
+}
