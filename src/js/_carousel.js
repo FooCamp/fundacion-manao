@@ -8,34 +8,34 @@ let actualStory = 0 // Default 0
 indicators[0].classList.add('active')
 card[0].classList.add('active')
 
+function toggleActive() {
+  indicators[actualStory].classList.toggle('active')
+  card[actualStory].classList.toggle('active')
+}
+
 btnFor.addEventListener('click', () => {
-  indicators[actualStory].classList.remove('active')
-  card[actualStory].classList.remove('active')
-  actualStory = actualStory + 1
+  toggleActive()
+  actualStory++
   if (actualStory >= indicators.length) {
     actualStory = 0
   }
-  indicators[actualStory].classList.add('active')
-  card[actualStory].classList.add('active')
+  toggleActive()
 })
 
 btnBack.addEventListener('click', () => {
-  indicators[actualStory].classList.remove('active')
-  card[actualStory].classList.remove('active')
-  actualStory = actualStory - 1
+  toggleActive()
+  actualStory--
   if (actualStory < 0) {
     actualStory = indicators.length - 1
   }
-  indicators[actualStory].classList.add('active')
-  card[actualStory].classList.add('active')
+  toggleActive()
 })
 
 indicators.forEach((item, i) => {
   item.addEventListener('click', () => {
-    indicators[actualStory].classList.remove('active')
-    card[actualStory].classList.remove('active')
-    item.classList.add('active')
-    card[i].classList.add('active')
+    toggleActive()
+    item.classList.toggle('active')
+    card[i].classList.toggle('active')
     actualStory = i
   })
 })

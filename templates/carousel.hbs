@@ -1,26 +1,29 @@
 <div class="general-container">
   <div class="carousel">
       <div class="carousel-container">
-          <div class="card-wrapper">
+          <ul class="card-wrapper">
             {{#each carouselSlides}}
               {{{module this}}}
             {{/each}}
-          </div>
+          </ul>
+
           <div class="card-control">
             <div class="control-container">
-              <div class="control__arrow-back arrow">
-                <img src="/images/carousel_arrow.svg" alt="">
-              </div>
-              <div class="control__arrow-for arrow">
-                <img src="/images/carousel_arrow.svg" alt="">
-              </div>
+              <button class="control__arrow-back arrow" aria-lable="Anterior elemento">
+                <img src="/images/carousel_arrow.svg" alt="Anterior">
+              </button>
+              <button class="control__arrow-for arrow" aria-lable="Siguiente elemento">
+                <img src="/images/carousel_arrow.svg" alt="Siguente">
+              </button>
             </div>
+
           </div>
           <div class="card-indicators">
             {{#each carouselSlides}}
-              <button class=""></button>
+              <button class="card-indicators__button" aria-lable="Ir al siguiente elemento"></button>
             {{/each}}
           </div>
+
       </div>
   </div>
 </div>
