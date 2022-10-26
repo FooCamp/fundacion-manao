@@ -1,0 +1,133 @@
+:root {
+  --time-transitions: 0.5s;
+}
+
+.general-container {
+  @include grid;
+}
+
+.carousel {
+  @include col(4, 6);
+
+  display: flex;
+  align-items: flex-end;
+
+  &-container {
+    margin-bottom: 8px;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 24px;
+  box-shadow: 0 2px 20px 0 rgb(0 0 0 / 5%);
+  margin-top: 50px;
+  opacity: 0;
+  padding: 72px 48px 48px;
+  position: absolute;
+  transition: opacity var(--time-transitions) ease;
+}
+
+.card.active {
+  position: relative;
+  opacity: 1;
+}
+
+.card-thumb {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: -48px;
+  width: 100%;
+}
+
+.client-img {
+  border: 4px solid var(--brand-green);
+  border-radius: 50%;
+  height: 96px;
+  position: relative;
+  width: 96px;
+}
+
+.review {
+  @include body-xl-med;
+
+  margin: 0;
+  text-align: center;
+}
+
+.card-info {
+  margin-top: 40px;
+
+  &__name-title {
+    @include heading-5;
+
+    text-align: center;
+  }
+
+  &__name-subtitle {
+    @include body-s-reg;
+
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.card-control {
+  position: relative;
+  width: 100%;
+}
+
+.control-container {
+  display: flex;
+  bottom: 48px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 48px;
+  position: absolute;
+  width: 100%;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 20px;
+}
+
+.control {
+  &__arrow-back img {
+    transform: rotate(180deg);
+  }
+}
+
+.card-indicators {
+  display: flex;
+  bottom: 8px;
+  justify-content: center;
+  left: 50%;
+  margin-top: 40px;
+}
+
+.card-indicators button {
+  background: var(--grey-5);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  height: 8px;
+  margin-left: 8px;
+  padding: 0;
+  transition: width var(--time-transitions) ease;
+  width: 8px;
+}
+
+button.active {
+  background: var(--brand-green);
+  border-radius: 50px;
+  width: 24px;
+}
