@@ -1,0 +1,75 @@
+.aliados {
+  @include grid;
+}
+
+// mobile desing
+
+// large desing
+.eyebrow {
+  @include col(4, 9);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  padding: 0;
+  width: 648px;
+  height: 120px;
+  top: 256px;
+  left: 28vw;
+  gap: 4px;
+}
+
+.eyebrow-title {
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  height: 16px;
+  color: var(--brand-navy);
+}
+
+.eyebrow-description {
+  text-align: center;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  height: 96px;
+  color: var(--brand-navy);
+}
+
+.logos-container {
+  @include col(3, 10);
+
+  display: grid;
+  grid-template-rows: 58px;
+  grid-template-columns: repeat(4, 220px);
+  justify-items: center;
+  left: 19vw;
+  top: 432px;
+  row-gap: 25px;
+  position: absolute;
+}
+
+.logos-container img {
+  max-width: 164px;
+  max-height: 58px;
+}
+
+.shape-o {
+  transform: matrix(-0.82, -0.57, -0.57, 0.52, 1220, 250);
+  width: 340.33px;
+  height: 455.72px;
+  position: absolute;
+}
+
+.shape-a {
+  transform: matrix(0.34, 0.94, 0.94, -0.34, -450, 0);
+  width: 491.6px;
+  height: 523.62px;
+  position: absolute;
+}
