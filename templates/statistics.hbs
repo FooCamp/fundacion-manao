@@ -1,10 +1,11 @@
 <section class="statistics">
-  <span class="statistics__eyebrow">{{eyebrow}}</span>
-  <h2 class="statistics__headline">{{title}}</h2>
-  <div class="statistics__numbers">
+  <div class="statistics__headlines">
+    <span class="statistics__eyebrow eyebrow-typography">{{eyebrow}}</span>
+    <h2 class="statistics__headline">{{title}}</h2>
+  </div>
+  <div class="statistics__items">
     {{#each statisticsList}}
       {{{module this}}}
     {{/each}}
   </div>
-
 </section>

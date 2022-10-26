@@ -1,6 +1,4 @@
 .statistics {
-  @include grid;
-
   background-color: var(--brand-navy);
   margin: 0;
 
@@ -8,12 +6,19 @@
     margin: 0;
   }
 
+  &__headlines {
+    @include grid;
+  }
+
   &__eyebrow {
-    font-size: 16px;
     grid-column: 1/9;
     justify-content: center;
     display: flex;
-    color: #ffffff;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: var(--font-bold);
+    letter-spacing: 0.2em;
+    line-height: 1.6rem;
 
     @include breakpoint(md) {
       grid-column: 4/9;
@@ -26,16 +31,28 @@
     justify-content: center;
     display: flex;
     text-align: center;
-    color: #ffffff;
+    color: var(--white);
 
     @include breakpoint(md) {
       grid-column: 4/9;
     }
   }
 
-  &__numbers {
-    grid-column: 1/12;
-    font-size: 120px;
+  &__items {
+    @include grid;
+
+    grid-template-columns: 1fr;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+  }
+
+  &__value {
+    font-size: 80px;
     color: var(--brand-magenta);
   }
 }
