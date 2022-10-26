@@ -16,17 +16,24 @@
       grid-row: 1;
       justify-self: center;
       opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease;
 
       &:first-of-type {
         opacity: 1;
+        z-index: 1;
       }
 
       &.active {
         opacity: 1;
+        z-index: 1;
+        transition: opacity 0.2s ease 0.2s;
       }
 
       &.inactive {
         opacity: 0;
+        z-index: -1;
+        transition: opacity 0.2s ease;
       }
     }
   }
@@ -59,10 +66,10 @@
     @include breakpoint('lg') {
       @include col(7, 5);
 
-      aspect-ratio: 1 / 1;
       border-radius: 2.4rem;
       grid-row: 1;
       opacity: 0;
+      transition: opacity 0.2s ease;
 
       &:first-of-type {
         opacity: 1;
@@ -70,10 +77,12 @@
 
       &.active {
         opacity: 1;
+        transition: opacity 0.2s ease 0.2s;
       }
 
       &.inactive {
         opacity: 0;
+        transition: opacity 0.2s ease;
       }
     }
   }
@@ -86,6 +95,7 @@
     flex: 1;
     padding: 0;
     text-align: left;
+    cursor: pointer;
   }
 
   &__cta-border {
@@ -124,11 +134,23 @@
       }
 
       &.active {
-        opacity: 1;
+        .hero__cta {
+          @include body-m-bold;
+        }
+
+        .hero__cta-border {
+          display: block;
+        }
       }
 
       &.inactive {
-        opacity: 0;
+        .hero__cta {
+          @include body-m-reg;
+        }
+
+        .hero__cta-border {
+          display: none;
+        }
       }
     }
   }
