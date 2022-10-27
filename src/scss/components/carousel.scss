@@ -1,0 +1,136 @@
+:root {
+  --time-transitions: 0.5s;
+}
+
+.general-container {
+  @include grid;
+}
+
+.carousel {
+  @include col(4, 6);
+
+  display: flex;
+  align-items: flex-end;
+
+  &-container {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 2.4rem;
+  box-shadow: 0 0.2rem 2rem 0 rgb(0 0 0 / 5%);
+  margin-top: 5rem;
+  opacity: 0;
+  padding: 7.2rem 4.8rem 4.8rem;
+  position: absolute;
+  transition: opacity var(--time-transitions) ease;
+}
+
+.card.active {
+  position: relative;
+  opacity: 1;
+}
+
+.card-thumb {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: -4.8rem;
+  width: 100%;
+}
+
+.client-img {
+  border: 0.4rem solid var(--brand-green);
+  border-radius: 50%;
+  height: 9.6rem;
+  position: relative;
+  width: 9.6rem;
+}
+
+.review {
+  @include body-xl-med;
+
+  margin: 0;
+  text-align: center;
+}
+
+.card-info {
+  margin-top: 4rem;
+
+  &__name-title {
+    @include heading-5;
+
+    text-align: center;
+  }
+
+  &__name-subtitle {
+    @include body-s-reg;
+
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.card-control {
+  position: relative;
+  width: 100%;
+}
+
+.control-container {
+  display: flex;
+  bottom: 4.8rem;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 4.8rem;
+  position: absolute;
+  width: 100%;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 2rem;
+  padding: 0;
+  border: none;
+  background-color: var(--white);
+}
+
+.control {
+  &__arrow-back img {
+    transform: rotate(180deg);
+  }
+}
+
+.card-indicators {
+  display: flex;
+  bottom: 0.8rem;
+  justify-content: center;
+  left: 50%;
+  margin-top: 4rem;
+
+  &__button {
+    background: var(--grey-5);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    height: 0.8rem;
+    margin-left: 0.8rem;
+    padding: 0;
+    transition: width var(--time-transitions) ease;
+    width: 0.8rem;
+  }
+
+  &__button.active {
+    background: var(--brand-green);
+    border-radius: 5rem;
+    width: 2.4rem;
+  }
+}
