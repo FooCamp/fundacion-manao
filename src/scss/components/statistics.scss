@@ -25,13 +25,14 @@
     }
   }
 
-  &__headline {
+  &__title {
     grid-column: 1/9;
-    font-size: 40px;
     justify-content: center;
     display: flex;
     text-align: center;
     color: var(--white);
+
+    @include heading-3;
 
     @include breakpoint(md) {
       grid-column: 4/9;
@@ -49,10 +50,24 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__value {
     font-size: 80px;
     color: var(--brand-magenta);
+    font-size: 12rem;
+    font-weight: var(--font-bold);
+    line-height: 10rem;
+    text-align: center;
+    letter-spacing: -0.03em;
+  }
+
+  &__text {
+    @include body-m-reg;
+
+    color: var(--white);
   }
 }
