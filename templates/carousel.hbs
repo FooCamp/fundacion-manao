@@ -1,4 +1,4 @@
-<div class="general-container">
+<section class="general-container">
   <div class="carousel">
       <div class="carousel-container">
           <ul class="card-wrapper">
@@ -9,23 +9,24 @@
 
           <div class="card-control">
             <div class="control-container">
-              <button class="control__arrow-back arrow" aria-lable="Anterior elemento">
-                <img src="/images/carousel_arrow.svg" alt="Anterior">
+              <button class="control__arrow-back arrow" aria-label="Anterior elemento" title="Anterior elemento">
+                <img src="/images/carousel_arrow.svg" alt="" role="presentation">
               </button>
-              <button class="control__arrow-for arrow" aria-lable="Siguiente elemento">
-                <img src="/images/carousel_arrow.svg" alt="Siguente">
+              <button class="control__arrow-for arrow" aria-label="Siguiente elemento" title="Siguiente elemento">
+                <img src="/images/carousel_arrow.svg" alt="" role="presentation">
               </button>
             </div>
 
           </div>
           <div class="card-indicators">
+
             {{#each carouselSlides}}
-              <button class="card-indicators__button" aria-lable="Ir al siguiente elemento"></button>
+              <button class="card-indicators__button" aria-label="Elemento {{{@index}}} de {{{../carouselSlides.length}}}"></button>
             {{/each}}
           </div>
 
       </div>
   </div>
-</div>
+</section>
 
 

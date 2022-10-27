@@ -1,41 +1,61 @@
-const indicators = [...document.querySelectorAll('.card-indicators button')]
-const card = [...document.querySelectorAll('.card')]
-const btnFor = document.querySelector('.control__arrow-for')
-const btnBack = document.querySelector('.control__arrow-back')
-
-let actualStory = 0 // Default 0
-
-indicators[0].classList.add('active')
-card[0].classList.add('active')
-
-function toggleActive() {
-  indicators[actualStory].classList.toggle('active')
-  card[actualStory].classList.toggle('active')
+const CLASSES = {
+  active: 'active',
 }
 
-btnFor.addEventListener('click', () => {
-  toggleActive()
-  actualStory++
-  if (actualStory >= indicators.length) {
-    actualStory = 0
-  }
-  toggleActive()
-})
+const SELECTORS = {
+  carousel: '.carousel',
+  card: '.card',
+  indicators: '.card-indicators .card-indicators__button',
+  arrowFor: '.control__arrow-for',
+  arrowBack: '.control__arrow-back',
+}
 
-btnBack.addEventListener('click', () => {
-  toggleActive()
-  actualStory--
-  if (actualStory < 0) {
-    actualStory = indicators.length - 1
-  }
-  toggleActive()
-})
+const main = () => {
+  const carousels = document.querySelectorAll(SELECTORS.carousel)
 
-indicators.forEach((item, i) => {
-  item.addEventListener('click', () => {
-    toggleActive()
-    item.classList.toggle('active')
-    card[i].classList.toggle('active')
-    actualStory = i
+  carousels.forEach((item) => {
+    const indicators = item.querySelectorAll(SELECTORS.indicators)
+    const card = item.querySelectorAll(SELECTORS.card)
+    const btnFor = item.querySelector(SELECTORS.arrowFor)
+    const btnBack = item.querySelector(SELECTORS.arrowBack)
+
+    let actualStory = 0 // Default 0
+
+    indicators[0].classList.add(CLASSES.active)
+    card[0].classList.add(CLASSES.active)
+
+    function toggleActive() {
+      indicators[actualStory].classList.toggle(CLASSES.active)
+      card[actualStory].classList.toggle(CLASSES.active)
+    }
+
+    btnFor.addEventListener('click', () => {
+      toggleActive()
+      actualStory++
+      if (actualStory >= indicators.length) {
+        actualStory = 0
+      }
+      toggleActive()
+    })
+
+    btnBack.addEventListener('click', () => {
+      toggleActive()
+      actualStory--
+      if (actualStory < 0) {
+        actualStory = indicators.length - 1
+      }
+      toggleActive()
+    })
+
+    indicators.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        toggleActive()
+        item.classList.toggle(CLASSES.active)
+        card[i].classList.toggle(CLASSES.active)
+        actualStory = i
+      })
+    })
   })
-})
+}
+
+main()
