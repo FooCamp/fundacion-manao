@@ -1,21 +1,16 @@
-<section>
-
-  <div class='aliados'>
-
-    <div class='eyebrow'>
-      <p class='eyebrow-typography eyebrow-title'>{{eyebrow}}</p>
-      <div class='heading-3 eyebrow-description'> {{title}}</div>
+<section class="aliados-wrapper">
+  <div class="aliados-section">
+    <div class="aliados-section__eyebrow">
+      <p class='eyebrow-typography aliados-section__eyebrow--title'>{{eyebrow}}</p>
+      <h3 class='heading-3 aliados-section__eyebrow--description'> {{title}}</h3>
     </div>
-
-    <div class='logos-container'>
-        {{#each logos}}
-          {{{asset this}}}
-        {{/each}}
+    <div class='aliados-section__logos'>
+      {{#each logos}}
+        <img class="aliados-section__logos--img" src="{{assetSrc this}}" alt="{{assetTitle this}}" />
+      {{/each}}
     </div>
-
-    <img class='shape-a' src="/image/Shape-A.svg" alt='shape-A'>
-
-    <img class='shape-o' src="/image/Shape-O.svg" alt='shape-O">
-
   </div>
+
+  <img class='aliados-wrapper__shape-a' src="/image/Shape-A.svg" alt="shape-A">
+  <img class='aliados-wrapper__shape-o' src="/image/Shape-O.svg" alt="shape-O">
 </section>
