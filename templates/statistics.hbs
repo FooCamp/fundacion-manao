@@ -1,11 +1,18 @@
 <section class="statistics">
-  <div class="statistics__headlines">
-    <span class="statistics__eyebrow eyebrow-typography">{{eyebrow}}</span>
-    <h3 class="statistics__title">{{title}}</h3>
-  </div>
-  <div class="statistics__items">
-    {{#each statisticsList}}
-      {{{module this}}}
-    {{/each}}
-  </div>
+	<div class="statistics__container">
+		<div class="statistics__headlines">
+			<span class="statistics__eyebrow eyebrow-typography">{{eyebrow}}</span>
+			<h3 class="statistics__title">{{title}}</h3>
+		</div>
+		<div class="statistics__items">
+			{{#each statisticsList}}
+				{{{module this}}}
+			{{/each}}
+		</div>
+	</div>
+	<div class="statistics__bg">
+		<div class="statistics__shape">
+
+		</div>
+	</div>
 </section>

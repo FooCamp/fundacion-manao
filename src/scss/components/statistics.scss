@@ -1,9 +1,23 @@
 .statistics {
-  background-color: var(--brand-navy);
   margin: 0;
+  position: relative;
+  display: block;
+  z-index: 1;
+  overflow: hidden;
 
   @include breakpoint(md) {
     margin: 0;
+  }
+
+  &__container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    background-color: var(--brand-navy);
+
+    @include breakpoint(md) {
+      padding-top: 15.8rem;
+      padding-bottom: 15.8rem;
+    }
   }
 
   &__headlines {
@@ -26,16 +40,19 @@
   }
 
   &__title {
+    @include heading-3;
+
     grid-column: 1/9;
     justify-content: center;
     display: flex;
     text-align: center;
     color: var(--white);
-
-    @include heading-3;
+    padding-top: 1rem;
+    margin: 0;
 
     @include breakpoint(md) {
       grid-column: 4/9;
+      padding-top: 0.8rem;
     }
   }
 
@@ -53,6 +70,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 6.4rem;
+
+    @include breakpoint(md) {
+      padding-top: 8.8rem;
+    }
   }
 
   &__value {
@@ -68,6 +90,39 @@
   &__text {
     @include body-m-reg;
 
-    color: var(--white);
+    color: var(--grey-4);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding-top: 0.8rem;
+  }
+
+  &__bg {
+    display: block;
+    position: relative;
+    height: 11.4rem;
+    width: 100%;
+    background-color: var(--white);
+    z-index: -1;
+
+    @include breakpoint(md) {
+      height: 16.4rem;
+    }
+  }
+
+  &__shape {
+    &::before {
+      content: url(/static/images/bg-o.svg);
+      fill: var(--brand-navy);
+      position: absolute;
+      transform: rotate(-90deg) scale(20);
+      right: 34%;
+      top: -102%;
+
+      @include breakpoint(md) {
+        transform: rotate(-90deg) scale(80);
+        right: 40%;
+        top: -423%;
+      }
+    }
   }
 }
