@@ -1,27 +1,27 @@
-.aliados-wrapper {
+.sponsors-wrapper {
   overflow: hidden;
   position: relative;
 
   &__shape-a {
     transform: matrix(0.34, 0.94, 0.94, -0.34, 0, 0);
-    width: 491.6px;
-    height: 523.62px;
+    width: 49.16rem;
+    height: 52.362rem;
     position: absolute;
     top: 0;
-    left: -400px;
+    left: -40rem;
   }
 
   &__shape-o {
     transform: matrix(0.34, 0.94, 0.94, -0.34, 0, 0);
-    width: 491.6px;
+    width: 49.16rem;
     height: 523.62px;
     position: absolute;
-    top: 350px;
-    left: 1240px;
+    top: 35rem;
+    left: 124rem;
   }
 }
 
-.aliados-section {
+.sponsors-section {
   @include grid;
 
   @include breakpoint(md) {
@@ -68,8 +68,8 @@
       &--img {
         @include col(auto, 2);
 
-        max-width: 164px;
-        max-height: 58px;
+        max-width: 16.4rem;
+        max-height: 5.8rem;
       }
     }
   }
