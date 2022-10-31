@@ -1,15 +1,81 @@
-.h1 {
-  @include heading-1;
+.container1 {
+  @include grid;
 }
 
 .eyebrow {
+  text-transform: uppercase;
   @include eyebrow-typography;
+  @include col(6, 3);
 }
 
-.container_person {
-  @include grid;
+.title3 {
+  @include heading-3;
+
+  text-align: center;
+  @include col(4, 7);
 }
 
 .description {
   @include body-l-reg;
+
+  text-align: center;
+  @include col(4, 8);
+
+  width: 744px;
+  height: 84px;
+  top: 32px;
+  position: relative;
+}
+
+.container2 {
+  position: relative;
+  display: flex;
+  top: 124px;
+}
+
+.container2int {
+  @include grid;
+
+  display: flex;
+}
+
+.imagecard {
+  width: 346px;
+  height: 470px;
+  border-radius: 24px;
+}
+
+.titleimage {
+  @include heading-4;
+
+  position: absolute;
+  width: 346px;
+  height: 40px;
+  top: 385px;
+  text-align: center;
+  color: #fff;
+}
+
+.subtimage {
+  @include body-m-reg;
+
+  position: absolute;
+  width: 346px;
+  height: 24px;
+  bottom: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.quoteimage {
+  @include grid;
+  @include heading-3;
+
+  position: absolute;
+  @include col(2, 6);
+
+  width: 744px;
+  height: 84px;
+  bottom: -120px;
+  text-align: center;
 }
