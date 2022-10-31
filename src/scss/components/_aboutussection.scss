@@ -12,7 +12,9 @@
   @include heading-3;
 
   text-align: center;
-  @include col(4, 7);
+  @include col(4, 6);
+
+  margin-bottom: 30px;
 }
 
 .description {
@@ -21,21 +23,34 @@
   text-align: center;
   @include col(4, 8);
 
+  position: relative;
   width: 744px;
   height: 84px;
-  top: 32px;
-  position: relative;
 }
 
 .container2 {
-  position: relative;
-  display: flex;
-  top: 124px;
-}
-
-.container2int {
   @include grid;
 
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 256px;
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+.cards-grid__container {
+  @include col(2, 10);
+
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+  margin-top: 110px;
+}
+
+.card__container {
   display: flex;
 }
 
@@ -43,6 +58,7 @@
   width: 346px;
   height: 470px;
   border-radius: 24px;
+  overflow: hidden;
 }
 
 .titleimage {
@@ -68,14 +84,14 @@
 }
 
 .quoteimage {
-  @include grid;
   @include heading-3;
 
-  position: absolute;
-  @include col(2, 6);
-
-  width: 744px;
-  height: 84px;
-  bottom: -120px;
+  width: 654px;
+  height: 96px;
   text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(100% + 60px);
+  left: 50%;
+  transform: translateX(-50%);
 }
