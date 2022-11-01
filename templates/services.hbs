@@ -1,0 +1,15 @@
+{{!-- services --}}
+<section class="services">
+  <div class="services-container">
+    <div class="services-info">
+      <p class="services-eyebrow">{{eyebrow}}</p>
+      <h3 class="services-title heading-3">{{title}}</h3>
+    </div>
+    <div class="services-cards">
+      {{#each servicesList}}
+        {{{module this}}}
+      {{/each}}
+    </div>
+  </div>
+</section>
+
