@@ -1,13 +1,8 @@
 .statistics {
-  margin: 0;
   position: relative;
   display: block;
   z-index: 1;
   overflow: hidden;
-
-  @include breakpoint(md) {
-    margin: 0;
-  }
 
   &__container {
     padding-top: 12rem;
@@ -33,6 +28,7 @@
     font-weight: var(--font-bold);
     letter-spacing: 0.2em;
     line-height: 1.6rem;
+    margin: 0;
 
     @include breakpoint(md) {
       grid-column: 4/9;
@@ -71,6 +67,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 6.4rem;
+    margin: 0;
 
     @include breakpoint(md) {
       padding-top: 8.8rem;
