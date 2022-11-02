@@ -1,0 +1,16 @@
+<section class="sponsors-wrapper">
+  <div class="sponsors-section">
+    <div class="sponsors-section__eyebrow">
+      <p class='eyebrow-typography sponsors-section__eyebrow--title'>{{eyebrow}}</p>
+      <h3 class='heading-3 sponsors-section__eyebrow--description'> {{title}}</h3>
+    </div>
+    <div class='sponsors-section__logos'>
+      {{#each logos}}
+        <img class="sponsors-section__logos--img" src="{{assetSrc this}}" alt="{{assetTitle this}}" />
+      {{/each}}
+    </div>
+  </div>
+
+  <img class='sponsors-wrapper__shape-a' src="/image/Shape-A.svg" alt="" role='presentation'>
+  <img class='sponsors-wrapper__shape-o' src="/image/Shape-O.svg" alt="" role='presentation'>
+</section>
