@@ -1,0 +1,21 @@
+.whatsAppBtn {
+  position: fixed;
+  right: 29.7px;
+  bottom: 29.7px;
+
+  &__GreenBackground {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: var(--brand-green);
+    text-decoration: none;
+    display: flex;
+    place-content: center;
+    align-items: center;
+  }
+
+  &__Logo {
+    color: var(--white);
+    font-size: 1.9rem;
+  }
+}
