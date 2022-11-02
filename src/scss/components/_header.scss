@@ -2,48 +2,48 @@
   position: sticky;
   top: 0;
   background: var(--white);
-}
 
-.container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 24px 48px;
-  width: 100%;
-}
-
-.logo {
-  width: 135px;
-
-  &__image {
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 24px 48px;
     width: 100%;
   }
-}
 
-.menu {
-  align-items: center;
-  display: flex;
-  gap: 40px;
+  &__logo {
+    width: 135px;
 
-  &__item .link {
-    @include link-typography;
-
-    color: var(--brand-navy);
+    &__image {
+      width: 100%;
+    }
   }
 
-  &__item:last-child {
-    & .link {
-      @include button-typography;
+  &__menu {
+    align-items: center;
+    display: flex;
+    gap: 40px;
 
-      align-items: center;
-      animation: 10s ease infinite button-bg-colors;
-      border-radius: 24px;
-      display: flex;
-      color: var(--white);
-      justify-content: center;
-      padding: 16px 32px;
+    &__item .link {
+      @include link-typography;
+
+      color: var(--brand-navy);
+    }
+
+    &__item:last-child {
+      & .link {
+        @include button-typography;
+
+        align-items: center;
+        animation: 10s ease infinite button-bg-colors;
+        border-radius: 24px;
+        display: flex;
+        color: var(--white);
+        justify-content: center;
+        padding: 16px 32px;
+      }
     }
   }
 }
