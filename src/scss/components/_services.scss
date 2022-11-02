@@ -47,10 +47,9 @@
     @include col(1, 12);
 
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-flow: column wrap;
 
-    // flex-direction: column;
     &:last-child {
       margin-bottom: 0;
     }
