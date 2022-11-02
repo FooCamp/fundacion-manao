@@ -1,0 +1,13 @@
+{{!-- service card --}}
+<a title="{{title}}" href="{{ctaLink}}" target="{{#if isExternalLink}}_blank{{else}}_self{{/if}}" class="services-card bg-{{backgroundColor}}">
+      <div class="services-card__image">
+        <img class="img-icon" src="{{assetSrc icon}}" alt="{{assetTitle icon}}">
+      </div>
+
+      <h5 class="services-card__title">{{title}}</h5>
+
+      <div class="services-card__arrow">
+        <img src="/images/icon_arrow_link.svg" alt="Go to {{title}}" role="presentation">
+      </div>
+</a>
+
