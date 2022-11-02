@@ -3,29 +3,27 @@
 }
 
 .about_us__eyebrow {
-  text-transform: uppercase;
   @include eyebrow-typography;
   @include col(6, 3);
 
+  text-transform: uppercase;
   margin: 0;
 }
 
 .about_us__heading {
   @include heading-3;
-
-  text-align: center;
   @include col(4, 6);
 
+  text-align: center;
   margin-bottom: 3rem;
   margin-top: 0;
 }
 
 .about_us__description {
   @include body-l-reg;
-
-  text-align: center;
   @include col(3, 8);
 
+  text-align: center;
   position: relative;
   margin: 0;
 }
@@ -106,6 +104,9 @@
 .quotation_marks__open {
   @include col(3, 1);
 
+  width: 6.3rem;
+  height: 4.8rem;
+
   &::before {
     content: '';
     display: block;
@@ -119,11 +120,14 @@
 .quotation_marks__close {
   @include col(10, 1);
 
+  width: 6.3rem;
+  height: 4.8rem;
+
   &::before {
     content: '';
     display: block;
     position: relative;
-    height: 10.5rem;
+    height: 10rem;
     width: 100%;
     background-color: transparent;
   }
