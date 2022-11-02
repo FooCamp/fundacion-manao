@@ -1,0 +1,76 @@
+.sponsors-wrapper {
+  overflow: hidden;
+  position: relative;
+
+  &__shape-a {
+    transform: matrix(0.34, 0.94, 0.94, -0.34, 0, 0);
+    width: 49.16rem;
+    height: 52.362rem;
+    position: absolute;
+    top: 0;
+    left: -40rem;
+  }
+
+  &__shape-o {
+    transform: matrix(0.34, 0.94, 0.94, -0.34, 0, 0);
+    width: 49.16rem;
+    height: 523.62px;
+    position: absolute;
+    top: 35rem;
+    left: 124rem;
+  }
+}
+
+.sponsors-section {
+  @include grid;
+
+  @include breakpoint(md) {
+    padding-top: 25.6rem;
+    padding-bottom: 33.6rem;
+  }
+
+  &__eyebrow {
+    // Mobile
+
+    @include breakpoint(md) {
+      // Desktop
+      @include col(4, 6);
+
+      margin-bottom: 5.6rem;
+      text-align: center;
+      color: var(--brand-navy);
+      align-self: stretch;
+    }
+
+    &--title {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    &--description {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logos {
+    @include breakpoint(md) {
+      // Desktop
+      @include col(3, 8);
+
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 4.8rem;
+      row-gap: 1.6rem;
+
+      &--img {
+        @include col(auto, 2);
+
+        max-width: 16.4rem;
+        max-height: 5.8rem;
+      }
+    }
+  }
+}
