@@ -6,6 +6,8 @@
   text-transform: uppercase;
   @include eyebrow-typography;
   @include col(6, 3);
+
+  margin: 0;
 }
 
 .title3 {
@@ -14,7 +16,8 @@
   text-align: center;
   @include col(4, 6);
 
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
+  margin-top: 0;
 }
 
 .description {
@@ -24,6 +27,8 @@
   @include col(3, 8);
 
   position: relative;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .container2 {
@@ -33,7 +38,7 @@
     content: '';
     display: block;
     position: relative;
-    height: 256px;
+    height: 25.6rem;
     width: 100%;
     background-color: transparent;
   }
@@ -45,7 +50,7 @@
   justify-content: space-between;
   position: relative;
   display: flex;
-  margin-top: 110px;
+  margin-top: 11rem;
 }
 
 .card__container {
@@ -53,9 +58,9 @@
 }
 
 .imagecard {
-  width: 346px;
-  height: 470px;
-  border-radius: 24px;
+  width: 34.6rem;
+  height: 47rem;
+  border-radius: 2.4rem;
   overflow: hidden;
 }
 
@@ -63,9 +68,9 @@
   @include heading-4;
 
   position: absolute;
-  width: 346px;
-  height: 40px;
-  top: 385px;
+  width: 34.6rem;
+  height: 4rem;
+  top: 38.5rem;
   text-align: center;
   color: #fff;
 }
@@ -74,9 +79,9 @@
   @include body-m-reg;
 
   position: absolute;
-  width: 346px;
-  height: 24px;
-  bottom: 24px;
+  width: 34.6rem;
+  height: 2.4rem;
+  bottom: 2.4rem;
   text-align: center;
   color: #fff;
 }
@@ -84,12 +89,12 @@
 .quoteimage {
   @include heading-3;
 
-  width: 654px;
-  height: 96px;
+  width: 65.4rem;
+  height: 9.6rem;
   text-align: center;
   margin: 0 auto;
   position: absolute;
-  top: calc(100% + 60px);
+  top: calc(100% + 6rem);
   left: 50%;
   transform: translateX(-50%);
   color: #576684;
@@ -100,18 +105,27 @@
 }
 
 .quotation-marks1 {
-  font-size: 60px;
   @include col(3, 1);
 
-  margin-top: -40px;
-  height: 80px;
-  color: #3777bc;
+  &::before {
+    content: '';
+    display: block;
+    position: relative;
+    height: 7rem;
+    width: 100%;
+    background-color: transparent;
+  }
 }
 
 .quotation-marks2 {
-  font-size: 60px;
   @include col(10, 1);
 
-  height: 80px;
-  color: #3777bc;
+  &::before {
+    content: '';
+    display: block;
+    position: relative;
+    height: 10.5rem;
+    width: 100%;
+    background-color: transparent;
+  }
 }
