@@ -1,8 +1,8 @@
-.container1 {
+.about_us {
   @include grid;
 }
 
-.eyebrow {
+.about_us__eyebrow {
   text-transform: uppercase;
   @include eyebrow-typography;
   @include col(6, 3);
@@ -10,7 +10,7 @@
   margin: 0;
 }
 
-.title3 {
+.about_us__heading {
   @include heading-3;
 
   text-align: center;
@@ -20,18 +20,17 @@
   margin-top: 0;
 }
 
-.description {
+.about_us__description {
   @include body-l-reg;
 
   text-align: center;
   @include col(3, 8);
 
   position: relative;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
 }
 
-.container2 {
+.person_card {
   @include grid;
 
   &::after {
@@ -44,7 +43,7 @@
   }
 }
 
-.cards-grid__container {
+.person_card__cards_grid {
   @include col(2, 10);
 
   justify-content: space-between;
@@ -53,18 +52,18 @@
   margin-top: 11rem;
 }
 
-.card__container {
+.person_card__container {
   display: flex;
 }
 
-.imagecard {
+.person_card__image_card {
   width: 34.6rem;
   height: 47rem;
   border-radius: 2.4rem;
   overflow: hidden;
 }
 
-.titleimage {
+.person_card__title_image {
   @include heading-4;
 
   position: absolute;
@@ -75,7 +74,7 @@
   color: #fff;
 }
 
-.subtimage {
+.person_card__subtitle_image {
   @include body-m-reg;
 
   position: absolute;
@@ -86,7 +85,7 @@
   color: #fff;
 }
 
-.quoteimage {
+.person_card__quote_image {
   @include heading-3;
 
   width: 65.4rem;
@@ -100,11 +99,11 @@
   color: #576684;
 }
 
-.quotation-marks__container {
+.quotation_marks__container {
   @include grid;
 }
 
-.quotation-marks1 {
+.quotation_marks__open {
   @include col(3, 1);
 
   &::before {
@@ -117,7 +116,7 @@
   }
 }
 
-.quotation-marks2 {
+.quotation_marks__close {
   @include col(10, 1);
 
   &::before {
