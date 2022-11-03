@@ -61,6 +61,17 @@
   overflow: hidden;
 }
 
+.person_card__overlay {
+  background: linear-gradient(180deg, rgb(0 16 48 / 0%) 0%, #001030 96.87%);
+  opacity: 0.8;
+  width: 34.6rem;
+  height: 14.7rem;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 0 0 2.4rem 2.4rem;
+}
+
 .person_card__title_image {
   @include heading-4;
 
