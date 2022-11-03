@@ -20,7 +20,8 @@
   }
 
   &__eyebrow {
-    grid-column: 1/9;
+    @include col(1, 9);
+
     justify-content: center;
     display: flex;
     color: var(--white);
@@ -37,8 +38,8 @@
 
   &__title {
     @include heading-3;
+    @include col(1, 9);
 
-    grid-column: 1/9;
     justify-content: center;
     display: flex;
     text-align: center;
@@ -75,7 +76,6 @@
   }
 
   &__value {
-    font-size: 80px;
     color: var(--brand-magenta);
     font-size: 12rem;
     font-weight: var(--font-bold);
