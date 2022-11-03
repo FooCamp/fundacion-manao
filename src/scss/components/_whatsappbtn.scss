@@ -1,7 +1,7 @@
 .whatsapp-btn {
   position: fixed;
-  right: 29.7px;
-  bottom: 29.7px;
+  right: 21.65px;
+  bottom: 21.65px;
 
   &__green-background {
     width: 3.2rem;
@@ -17,5 +17,10 @@
   &__logo {
     color: var(--white);
     font-size: 1.9rem;
+  }
+
+  @include breakpoint(md) {
+    right: 29.65px;
+    bottom: 29.65px;
   }
 }
