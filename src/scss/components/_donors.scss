@@ -4,7 +4,7 @@
 
 .donors {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .donors_image {
@@ -12,31 +12,32 @@
 }
 
 .donors_description {
-  @include body-xl-med;
+  @include heading-3;
 
-  font-size: 2.5rem;
-  @include col(2, 8);
+  font-weight: var(--font-med);
+  @include col(2, 7);
 }
 
 .donors_link_container {
   @include link-typography;
-  @include col(2, 5);
+  @include col(2, 4);
 
   display: flex;
   padding: 2.5rem 0 19.5rem;
 }
 
 .donors_ctaPrimary_link a {
-  color: #fff;
-  border-radius: 100px;
+  color: var(--white);
+  border-radius: 6.25rem;
+  width: 13.75rem;
   padding: 1.25rem 5.4rem;
-  background-color: #08152e;
+  background-color: var(--brand-navy);
   margin-right: 3rem;
 }
 
 .donors_ctaSecondary_link a {
   position: relative;
-  color: #08152e;
+  color: var(--brand-navy);
   padding: 0.75rem 0;
 }
 
@@ -46,16 +47,16 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  border-bottom: solid 2px #08152e;
+  border-bottom: solid 2px var(--brand-navy);
 }
 
 .donors_figure {
   position: absolute;
   z-index: 1;
-  bottom: 2rem;
-  right: -26rem;
+  bottom: 7rem;
+  right: -30rem;
   font-size: 50%;
-  height: 41.25rem;
-  width: 40.688rem;
+  height: 50rem;
+  width: 50rem;
   transform: rotate(-60.52deg);
 }
