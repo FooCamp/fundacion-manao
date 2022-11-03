@@ -1,9 +1,9 @@
-.whatsAppBtn {
+.whatsapp-btn {
   position: fixed;
   right: 29.7px;
   bottom: 29.7px;
 
-  &__GreenBackground {
+  &__green-background {
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;
@@ -14,7 +14,7 @@
     align-items: center;
   }
 
-  &__Logo {
+  &__logo {
     color: var(--white);
     font-size: 1.9rem;
   }
