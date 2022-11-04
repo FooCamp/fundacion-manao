@@ -1,0 +1,22 @@
+<div class="donors">
+  <div class="donors_image">
+    {{{asset image}}}
+  </div>
+  <div class="donors_info">
+    <p class="donors_description">{{description}}</p>
+    <div class="donors_link_container">
+      <div class="donors_ctaPrimary_link" aria-label="Button for donations">
+        {{#if ctaPrimary}}
+          {{{module ctaPrimary}}}
+        {{/if}}
+      </div>
+      <div class="donors_ctaSecondary_link" aria-label="Button why donate">
+        {{#if ctaSecondary}}
+          {{{module ctaSecondary}}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  <img class="donors_figure" src="/image/shape-m.svg" alt="" role="presentation"/>
+</div>
+
