@@ -11,15 +11,20 @@
     margin-bottom: 8.3rem;
   }
 
-  &__sub-container {
-    @include col(1, 4);
+  &__wrapper {
+    @include grid;
 
-    @include breakpoint('lg') {
-      @include col(2, 5);
+    @include col(1, 8);
 
-      align-self: center;
+    margin-left: 0;
+    margin-right: 0;
+
+    @include breakpoint('md') {
+      @include col(1, 12);
+
       grid-row: 1;
-      justify-self: center;
+      margin-left: 0;
+      margin-right: 0;
       opacity: 0;
       z-index: -1;
       transition: opacity 0.2s ease;
@@ -40,6 +45,17 @@
         z-index: -1;
         transition: opacity 0.2s ease;
       }
+    }
+  }
+
+  &__sub-container {
+    @include col(1, 4);
+
+    @include breakpoint('md') {
+      @include col(2, 5);
+
+      align-self: center;
+      justify-self: center;
     }
   }
 
@@ -80,27 +96,13 @@
   &__image {
     @include col(1, 4);
 
-    @include breakpoint('lg') {
+    order: -1;
+
+    @include breakpoint('md') {
       @include col(7, 5);
 
+      order: 0;
       border-radius: 2.4rem;
-      grid-row: 1;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-
-      &:first-of-type {
-        opacity: 1;
-      }
-
-      &.active {
-        opacity: 1;
-        transition: opacity 0.2s ease 0.2s;
-      }
-
-      &.inactive {
-        opacity: 0;
-        transition: opacity 0.2s ease;
-      }
     }
   }
 
@@ -142,7 +144,7 @@
   }
 
   &__cta-sub-container {
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
       @include col(auto, 3);
 
       display: flex;
@@ -185,13 +187,18 @@
   }
 
   .hero__shape {
-    max-width: 100%;
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
+    display: none;
 
-    &.active {
-      opacity: 1;
+    @include breakpoint('md') {
+      display: block;
+      max-width: 100%;
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+
+      &.active {
+        opacity: 1;
+      }
     }
   }
 

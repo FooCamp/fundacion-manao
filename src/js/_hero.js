@@ -73,14 +73,13 @@ const main = () => {
 
   const ctas = document.querySelectorAll('.hero__cta')
   const ctasSubcontainer = document.querySelectorAll('.hero__cta-sub-container')
-  const heroSubcontainer = document.querySelectorAll('.hero__sub-container')
-  const heroImage = document.querySelectorAll('.hero__image')
+  const heroWrapper = document.querySelectorAll('.hero__wrapper')
   const heroShape = document.querySelectorAll('.hero__shape')
 
   //Adding function to include accesibility atributes
 
   const setUpInitialA11y = () => {
-    heroSubcontainer.forEach((item, index) => {
+    heroWrapper.forEach((item, index) => {
       if (index === 0) {
         item.setAttribute('aria-hidden', false)
       } else {
@@ -91,23 +90,23 @@ const main = () => {
         }
       }
     })
-
-    heroImage.forEach((item, index) => {
-      item.setAttribute('aria-hidden', index !== 0)
-    })
   }
 
   ctas.forEach((cta, index) => {
     cta.addEventListener('click', () => {
       //Removing active class to the elements without the index of the current element
 
-      heroSubcontainer.forEach((item, itemIndex) => {
+      heroWrapper.forEach((item, itemIndex) => {
         toggleElementsVisibility(item, itemIndex, index, true)
       })
 
-      heroImage.forEach((item, itemIndex) => {
-        toggleElementsVisibility(item, itemIndex, index, true)
-      })
+      // heroSubcontainer.forEach((item, itemIndex) => {
+      //   toggleElementsVisibility(item, itemIndex, index, true)
+      // })
+
+      // heroImage.forEach((item, itemIndex) => {
+      //   toggleElementsVisibility(item, itemIndex, index, true)
+      // })
 
       ctasSubcontainer.forEach((item, itemIndex) => {
         toggleElementsVisibility(item, itemIndex, index)
