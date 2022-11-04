@@ -17,6 +17,9 @@
 # js bundle
 /static/*.js
 
+# svg compiled
+/static/*.svg
+
 # misc
 stacy-debug.log
 /npm-debug.log
