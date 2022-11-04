@@ -19,12 +19,12 @@ const main = () => {
     const btnFor = item.querySelector(SELECTORS.arrowFor)
     const btnBack = item.querySelector(SELECTORS.arrowBack)
 
-    let actualStory = 0 // Default 0
+    let actualStory = 0
 
     indicators[0].classList.add(CLASSES.active)
     card[0].classList.add(CLASSES.active)
 
-    function toggleActive() {
+    const toggleActive = () => {
       indicators[actualStory].classList.toggle(CLASSES.active)
       card[actualStory].classList.toggle(CLASSES.active)
     }
