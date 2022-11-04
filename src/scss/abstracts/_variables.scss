@@ -23,4 +23,10 @@
   --font-bold: 700;
   --font-med: 500;
   --font-reg: 400;
+
+  // Z-Index
+
+  --z-index-modal: 3; // Modal
+  --z-index-top: 2; // Only for Navigator bar and WhatApp buttom
+  --z-index-mid: 1;
 }
