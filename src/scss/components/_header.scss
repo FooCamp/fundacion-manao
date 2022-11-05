@@ -1,0 +1,96 @@
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: var(--z-index-top);
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 2.4rem 4.8rem;
+    width: 100%;
+  }
+
+  &__logo {
+    width: 135px;
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    align-items: center;
+    display: flex;
+    gap: 4rem;
+
+    &__item .link {
+      @include link-typography;
+
+      color: var(--brand-navy);
+    }
+
+    &__item:last-child {
+      & .link {
+        @include button-typography;
+
+        align-items: center;
+        animation: 10s ease infinite button-bg-colors;
+        border-radius: 24px;
+        display: flex;
+        color: var(--white);
+        justify-content: center;
+        padding: 1.6rem 3.2rem;
+      }
+    }
+  }
+}
+
+@keyframes button-bg-colors {
+  0% {
+    background-color: var(--brand-blue);
+  }
+
+  10% {
+    background-color: var(--brand-blue);
+  }
+
+  20% {
+    background-color: var(--brand-green);
+  }
+
+  30% {
+    background-color: var(--brand-green);
+  }
+
+  40% {
+    background-color: var(--brand-orange);
+  }
+
+  50% {
+    background-color: var(--brand-orange);
+  }
+
+  60% {
+    background-color: var(--brand-magenta);
+  }
+
+  70% {
+    background-color: var(--brand-magenta);
+  }
+
+  80% {
+    background-color: var(--brand-purple);
+  }
+
+  90% {
+    background-color: var(--brand-purple);
+  }
+
+  100% {
+    background-color: var(--brand-blue);
+  }
+}

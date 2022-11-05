@@ -1,6 +1,7 @@
 :root {
   --transition: all 200ms linear;
 }
+
 .services {
   position: relative;
   padding: 12rem 0 13.6rem;
@@ -8,36 +9,47 @@
   @include breakpoint(md) {
     padding: 25.6rem 0 38rem;
   }
+
   &-container {
     @include grid;
   }
+
   &-info {
     @include col(1, 12);
+
     text-align: center;
-    //Desktop
+
+    // Desktop
     @include breakpoint(md) {
       @include col(4, 6);
     }
   }
+
   &-eyebrow {
     @include eyebrow-typography;
-    margin: 0 0 0.8rem 0;
+
+    margin: 0 0 0.8rem;
     text-transform: uppercase;
   }
+
   &-title {
     @include heading-3;
-    margin: 0 0 3.2rem 0;
-    //Desktop
+
+    margin: 0 0 3.2rem;
+
+    // Desktop
     @include breakpoint(md) {
-      margin: 0 0 4.8rem 0;
+      margin: 0 0 4.8rem;
     }
   }
+
   &-cards {
     @include col(1, 12);
-    display: fleX;
-    flex-wrap: wrap;
+
+    display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-flow: column wrap;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -48,6 +60,7 @@
       text-align: center;
     }
   }
+
   &-card {
     position: relative;
     display: flex;
@@ -63,17 +76,21 @@
       width: calc(25% - 6.6rem);
       padding: 2.4rem;
       transition: var(--transition);
+
       img {
         transform: scale(1);
         transition: var(--transition);
       }
+
       &:hover {
         transform: translateY(-1.2rem);
         transition: var(--transition);
+
         img {
           transform: scale(1.03);
           transition: var(--transition);
         }
+
         .services-card__arrow {
           img {
             transform: scale(1.1);
@@ -86,31 +103,36 @@
       &-blue {
         background: var(--brand-blue);
       }
+
       &-green {
         background: var(--brand-green);
       }
+
       &-orange {
         background: var(--brand-orange);
       }
+
       &-magenta {
         background: var(--brand-magenta);
       }
+
       &-purple {
         background: var(--brand-purple);
       }
     }
 
     &__image {
-      //mobile
+      // mobile
       display: flex;
       align-items: center;
       justify-content: center;
       margin-right: 1.2rem;
       height: 3.6rem;
       width: 3.6rem;
-      //Desktop
+
+      // Desktop
       @include breakpoint(md) {
-        margin: 0 0 2rem 0;
+        margin: 0 0 2rem;
         height: 9.6rem;
         width: 9.6rem;
       }
@@ -120,18 +142,23 @@
         height: auto;
       }
     }
+
     &__title {
       @include heading-5;
+
       color: var(--white);
       margin: 0;
-      //Desktop
+
+      // Desktop
       @include breakpoint(md) {
-        margin: 0 0 4.7rem 0;
+        margin: 0 0 4.7rem;
       }
     }
+
     &__arrow {
       margin-left: auto;
-      //Desktop
+
+      // Desktop
       @include breakpoint(md) {
         margin-top: auto;
         margin-left: inherit;
@@ -139,7 +166,8 @@
 
       img {
         width: 3.2rem;
-        //Desktop
+
+        // Desktop
         @include breakpoint(md) {
           width: 4.8rem;
         }
@@ -147,14 +175,15 @@
     }
   }
 
-  //background shapes
+  // background shapes
   &::before,
   &::after {
     display: block;
     position: absolute;
   }
+
   &::before {
-    content: url(/static/images/bg-a.svg);
+    content: url('/static/images/bg-a.svg');
     top: -11rem;
     left: -15.5rem;
     width: 27rem;
@@ -165,8 +194,9 @@
       left: -26rem;
     }
   }
+
   &::after {
-    content: url(/static/images/bg-n.svg);
+    content: url('/static/images/bg-n.svg');
     width: 15rem;
     bottom: -1rem;
     right: 0;

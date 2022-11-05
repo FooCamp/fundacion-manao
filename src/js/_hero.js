@@ -3,9 +3,20 @@
 const CLASSES = {
   active: 'active',
   inactive: 'inactive',
+  shape: 'hero__shape',
+  shapes: ['shape1', 'shape2', 'shape3', 'shape4', 'shape5', 'shape6'],
+}
+
+const ASSETS = {
+  shapeImages: [
+    '/images/Shape-M.svg',
+    '/images/Shape-A-Green.svg',
+    'images/Shape-A-Magenta.svg',
+  ],
 }
 
 //Adding function to toggle visibility
+
 const toggleElementsVisibility = (
   item,
   index,
@@ -31,14 +42,43 @@ const toggleElementsVisibility = (
   }
 }
 
+//Adding function to change Hero Shapes
+
+const changeShapes = (index, container) => {
+  let indexIteratorOne = 2 * (index + 1) - 2
+  let indexIteratorTwo = 2 * (index + 1) - 1
+  if (
+    !container[0].classList.contains(CLASSES.shapes[indexIteratorOne]) &&
+    !container[1].classList.contains(CLASSES.shapes[indexIteratorTwo])
+  ) {
+    container[0].setAttribute('src', ASSETS.shapeImages[index])
+    container[1].setAttribute('src', ASSETS.shapeImages[index])
+    container[0].className = ''
+    container[1].className = ''
+    container[0].classList.add(
+      CLASSES.shape,
+      CLASSES.shapes[indexIteratorOne],
+      CLASSES.active
+    )
+    container[1].classList.add(
+      CLASSES.shape,
+      CLASSES.shapes[indexIteratorTwo],
+      CLASSES.active
+    )
+  }
+}
+
 const main = () => {
   //Defining selectors as constants.
+
   const ctas = document.querySelectorAll('.hero__cta')
   const ctasSubcontainer = document.querySelectorAll('.hero__cta-sub-container')
   const heroSubcontainer = document.querySelectorAll('.hero__sub-container')
   const heroImage = document.querySelectorAll('.hero__image')
+  const heroShape = document.querySelectorAll('.hero__shape')
 
   //Adding function to include accesibility atributes
+
   const setUpInitialA11y = () => {
     heroSubcontainer.forEach((item, index) => {
       if (index === 0) {
@@ -60,6 +100,7 @@ const main = () => {
   ctas.forEach((cta, index) => {
     cta.addEventListener('click', () => {
       //Removing active class to the elements without the index of the current element
+
       heroSubcontainer.forEach((item, itemIndex) => {
         toggleElementsVisibility(item, itemIndex, index, true)
       })
@@ -71,6 +112,8 @@ const main = () => {
       ctasSubcontainer.forEach((item, itemIndex) => {
         toggleElementsVisibility(item, itemIndex, index)
       })
+
+      changeShapes(index, heroShape)
     })
   })
 
