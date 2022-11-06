@@ -1,7 +1,7 @@
 .header {
+  background: var(--white);
   position: sticky;
   top: 0;
-  background: var(--white);
   z-index: var(--z-index-top);
 
   &__container {
@@ -10,12 +10,12 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1440px;
-    padding: 2.4rem 4.8rem;
+    padding: 2rem 2.4rem;
     width: 100%;
   }
 
   &__logo {
-    width: 135px;
+    width: 112px;
 
     &__image {
       width: 100%;
@@ -23,27 +23,117 @@
   }
 
   &__menu {
-    align-items: center;
+    background-color: var(--white);
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-between;
+    left: -100%;
+    padding: 4.8rem 2.4rem;
+    position: fixed;
+    top: 70px;
+    transition: 0.3s;
+    width: 100%;
+
+    &__item {
+      list-style: none;
+      margin: 16px 0;
+    }
 
     &__item .link {
-      @include link-typography;
+      @include body-m-bold;
 
       color: var(--brand-navy);
+      font-size: 24px;
+      text-decoration: none;
     }
 
     &__item:last-child {
-      & .link {
-        @include button-typography;
+      border-bottom: 1px solid var(--grey-1);
 
-        align-items: center;
-        animation: 10s ease infinite button-bg-colors;
-        border-radius: 24px;
-        display: flex;
-        color: var(--white);
-        justify-content: center;
-        padding: 1.6rem 3.2rem;
+      & .link {
+        display: none;
+      }
+    }
+  }
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: var(--black);
+  display: block;
+  height: 3px;
+  margin: 4px auto;
+  transition: all 0.3s ease-in-out;
+  width: 28px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.header__menu.active {
+  left: 0;
+}
+
+@include breakpoint(md) {
+  .hamburger {
+    display: none;
+  }
+
+  .header {
+    &__container {
+      padding: 2.4rem 4.8rem;
+    }
+
+    &__logo {
+      width: 135px;
+    }
+
+    &__menu {
+      flex-direction: row;
+      gap: 60px;
+      justify-content: end;
+      left: initial;
+      padding: 0;
+      position: relative;
+      transition: none;
+      top: initial;
+
+      &__item {
+        margin: 16px 0;
+      }
+
+      &__item .link {
+        @include link-typography;
+      }
+
+      &__item:last-child {
+        display: contents;
+
+        & .link {
+          @include button-typography;
+
+          align-items: center;
+          animation: 10s ease infinite button-bg-colors;
+          border-radius: 24px;
+          color: var(--white);
+          display: flex;
+          justify-content: center;
+          padding: 1.6rem 3.2rem;
+        }
       }
     }
   }

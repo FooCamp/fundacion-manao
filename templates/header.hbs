@@ -1,19 +1,32 @@
-  <header class="header">
+<header class="header">
+  <nav class="header__container">
 
-    <nav class="header__container">
+    <a
+      class="header__logo"
+      href="/index.html"
+      aria-label="Logo Fundación Manao"
+    >
+      <img
+        src="/images/LogoManao.svg"
+        alt=""
+        role="presentation"
+        class="logo__image"
+      />
+    </a>
 
-      <a class="header__logo" href="/index.html" aria-label="Logo Fundación Manao">
-        <img src="/images/LogoManao.svg" alt="" role="presentation" class="logo__image">
-      </a>
-
-      <ul class="header__menu">
+    <ul class="header__menu">
       {{#each mainLinks}}
-        <li class="header__menu__item" >
-          {{{module this}}}
-        </li>
+        <li class="header__menu__item">{{{module this}}}</li>
       {{/each}}
-      </ul>
 
-    </nav>
+    </ul>
 
-  </header>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+
+  </nav>
+</header>
