@@ -1,0 +1,57 @@
+{
+  "editor.fontSize": 15,
+  "editor.snippetSuggestions": "top",
+  "terminal.integrated.fontSize": 15,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
+  "extensions.ignoreRecommendations": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+  },
+  "git.autofetch": true,
+  "editor.accessibilitySupport": "off",
+  "gitlens.keymap": "chorded",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "workbench.editor.showTabs": true,
+  "breadcrumbs.enabled": true,
+  "prettier.requireConfig": true,
+  "eslint.validate": ["html", "javascript"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.linkedEditing": true,
+  "vetur.validation.template": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+	"window.zoomLevel": 1,
+	"css.validate": false,
+	"scss.validate": false
+}

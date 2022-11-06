@@ -1,0 +1,247 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  &__main-container {
+    @include grid;
+
+    position: relative;
+    margin-top: 7.2rem;
+    align-content: center;
+    margin-bottom: 8.3rem;
+  }
+
+  &__sub-container {
+    @include col(1, 4);
+
+    @include breakpoint('lg') {
+      @include col(2, 5);
+
+      align-self: center;
+      grid-row: 1;
+      justify-self: center;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease;
+
+      &:first-of-type {
+        opacity: 1;
+        z-index: var(--z-index-mid);
+      }
+
+      &.active {
+        opacity: 1;
+        z-index: var(--z-index-mid);
+        transition: opacity 0.2s ease 0.2s;
+      }
+
+      &.inactive {
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.2s ease;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+    position: relative;
+  }
+
+  &__link {
+    background-color: var(--brand-blue);
+    color: var(--white);
+    border-radius: 100rem;
+    box-sizing: border-box;
+    height: 5.3rem;
+    max-width: fit-content;
+    padding: 2rem 3.2rem;
+    position: relative;
+
+    .link {
+      @include button-typography;
+
+      color: var(--white);
+    }
+
+    &.link--blue {
+      background-color: var(--brand-blue);
+    }
+
+    &.link--green {
+      background-color: var(--brand-green);
+    }
+
+    &.link--magenta {
+      background-color: var(--brand-magenta);
+    }
+  }
+
+  &__image {
+    @include col(1, 4);
+
+    @include breakpoint('lg') {
+      @include col(7, 5);
+
+      border-radius: 2.4rem;
+      grid-row: 1;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+
+      &:first-of-type {
+        opacity: 1;
+      }
+
+      &.active {
+        opacity: 1;
+        transition: opacity 0.2s ease 0.2s;
+      }
+
+      &.inactive {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+    }
+  }
+
+  &__cta {
+    @include body-m-reg;
+
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  &__cta-border {
+    background-color: var(--brand-blue);
+    border-radius: 1rem;
+    display: none;
+    height: 0.4rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+    width: 100%;
+
+    &.cta--blue {
+      background-color: var(--brand-blue);
+    }
+
+    &.cta--green {
+      background-color: var(--brand-green);
+    }
+
+    &.cta--magenta {
+      background-color: var(--brand-magenta);
+    }
+  }
+
+  &__cta-container {
+    @include grid;
+  }
+
+  &__cta-sub-container {
+    @include breakpoint('lg') {
+      @include col(auto, 3);
+
+      display: flex;
+      flex-direction: column;
+
+      &:nth-child(3n + 1) {
+        grid-column-start: 2;
+      }
+
+      &:first-child {
+        .hero__cta {
+          @include body-m-bold;
+        }
+
+        .hero__cta-border {
+          display: block;
+        }
+      }
+
+      &.active {
+        .hero__cta {
+          @include body-m-bold;
+        }
+
+        .hero__cta-border {
+          display: block;
+        }
+      }
+
+      &.inactive {
+        .hero__cta {
+          @include body-m-reg;
+        }
+
+        .hero__cta-border {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hero__shape {
+    max-width: 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .shape1 {
+    height: 68.23rem;
+    left: -27rem;
+    opacity: 1;
+    top: -45rem;
+    transform: rotate(156.19deg);
+    width: 69.143rem;
+  }
+
+  .shape2 {
+    height: 64.6133rem;
+    opacity: 1;
+    right: -40rem;
+    top: 5rem;
+    transform: rotate(168.55deg);
+    width: 65.478rem;
+  }
+
+  .shape3 {
+    height: 59.064rem;
+    left: -45rem;
+    top: 27rem;
+    transform: rotate(-100.29deg);
+    width: 53.343rem;
+  }
+
+  .shape4 {
+    height: 59.596rem;
+    right: -47rem;
+    top: -7rem;
+    transform: rotate(62.36deg);
+    width: 55.842rem;
+  }
+
+  .shape5 {
+    height: 64.926rem;
+    left: -50rem;
+    top: 3rem;
+    transform: rotate(-71.15deg);
+    width: 61.04rem;
+  }
+
+  .shape6 {
+    height: 50.802rem;
+    right: -36rem;
+    top: 30rem;
+    transform: rotate(121.85deg);
+    width: 47.762rem;
+  }
+}

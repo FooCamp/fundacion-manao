@@ -1,27 +1,185 @@
-// Add the typography defined for the project in the designs
-h1,
-.h1 {
-  font-size: 4.4rem;
-
-  @include breakpoint(md) {
-    font-size: 5rem;
-  }
-
-  @include breakpoint(lg) {
-    font-size: 7.2rem;
-  }
+@mixin heading-1 {
+  font-size: 5.6rem;
+  font-weight: var(--font-bold);
+  line-height: 6.4rem;
 }
 
-h2,
-.h2 {
-  font-size: 3.8rem;
-
-  @include breakpoint(lg) {
-    font-size: 4.6rem;
-  }
+@mixin heading-2 {
+  font-size: 4.8rem;
+  font-weight: var(--font-bold);
+  line-height: 5.6rem;
 }
 
-p,
-.p {
+@mixin heading-3 {
+  font-size: 4rem;
+  font-weight: var(--font-bold);
+  line-height: 4.8rem;
+}
+
+@mixin heading-4 {
+  font-size: 3.2rem;
+  font-weight: var(--font-bold);
+  line-height: 4rem;
+}
+
+@mixin heading-5 {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  line-height: 2.8rem;
+}
+
+@mixin heading-6 {
   font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  line-height: 2.4rem;
+}
+
+@mixin body-xl-reg {
+  font-size: 2rem;
+  font-weight: var(--font-reg);
+  line-height: 3.2rem;
+}
+
+@mixin body-xl-med {
+  font-size: 2rem;
+  font-weight: var(--font-med);
+  line-height: 3.2rem;
+}
+
+@mixin body-xl-bold {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  line-height: 3.2rem;
+}
+
+@mixin body-l-reg {
+  font-size: 1.8rem;
+  font-weight: var(--font-reg);
+  line-height: 2.8rem;
+}
+
+@mixin body-l-bold {
+  font-size: 1.8rem;
+  font-weight: var(--font-bold);
+  line-height: 2.8rem;
+}
+
+@mixin body-m-reg {
+  font-size: 1.6rem;
+  font-weight: var(--font-reg);
+  line-height: 2.4rem;
+}
+
+@mixin body-m-bold {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  line-height: 2.4rem;
+}
+
+@mixin body-s-reg {
+  font-size: 1.4rem;
+  font-weight: var(--font-reg);
+  line-height: 2rem;
+}
+
+@mixin body-s-bold {
+  font-size: 1.4rem;
+  font-weight: var(--font-bold);
+  line-height: 2rem;
+}
+
+@mixin eyebrow-typography {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.2em;
+  line-height: 1.6rem;
+}
+
+@mixin button-typography {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  line-height: 1.6rem;
+}
+
+@mixin link-typography {
+  font-size: 1.6rem;
+  font-weight: var(--font-med);
+  line-height: 1.6rem;
+}
+
+// Headings
+.heading-1 {
+  @include heading-1;
+}
+
+.heading-2 {
+  @include heading-2;
+}
+
+.heading-3 {
+  @include heading-3;
+}
+
+.heading-4 {
+  @include heading-4;
+}
+
+.heading-5 {
+  @include heading-5;
+}
+
+.heading-6 {
+  @include heading-6;
+}
+
+// Body
+.body-xl-reg {
+  @include body-xl-reg;
+}
+
+.body-xl-med {
+  @include body-xl-med;
+}
+
+.body-xl-bold {
+  @include body-xl-bold;
+}
+
+.body-l-reg {
+  @include body-l-reg;
+}
+
+.body-l-bold {
+  @include body-l-bold;
+}
+
+.body-m-reg {
+  @include body-m-reg;
+}
+
+.body-m-bold {
+  @include body-m-bold;
+}
+
+.body-s-reg {
+  @include body-s-reg;
+}
+
+.body-s-bold {
+  @include body-s-bold;
+}
+
+// Eyebrow
+.eyebrow-typography {
+  @include eyebrow-typography;
+}
+
+// Button
+.button-typography {
+  @include button-typography;
+}
+
+// Link
+.link-typography {
+  @include link-typography;
 }

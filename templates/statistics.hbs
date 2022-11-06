@@ -1,0 +1,15 @@
+<section class="statistics">
+	<div class="statistics__container">
+		<div class="statistics__headlines">
+			<h2 class="statistics__eyebrow eyebrow-typography">{{eyebrow}}</h2>
+			<h3 class="statistics__title">{{title}}</h3>
+		</div>
+		<div class="statistics__items">
+			{{#each statisticsList}}
+				{{{module this}}}
+			{{/each}}
+		</div>
+	</div>
+	<div class="statistics__bg">
+	</div>
+</section>

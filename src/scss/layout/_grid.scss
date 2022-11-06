@@ -1,0 +1,38 @@
+$gutter-grid-mobile: 2.4rem;
+$gutter-grid-desktop: 4.8rem;
+$margin-mobile: 2.4rem;
+$margin-tablet: 4.8rem;
+$max-width-desktop: 134.4rem;
+
+@mixin container-desktop {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width-desktop;
+}
+
+@mixin grid {
+  column-gap: $gutter-grid-mobile;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-left: $margin-mobile;
+  margin-right: $margin-mobile;
+
+  @include breakpoint(md) {
+    column-gap: $gutter-grid-desktop;
+    grid-template-columns: repeat(12, 1fr);
+    margin-left: $margin-tablet;
+    margin-right: $margin-tablet;
+  }
+
+  @include breakpoint(lg) {
+    @include container-desktop;
+  }
+}
+
+@mixin col($start: 'auto', $end) {
+  grid-column: #{$start} / span #{$end};
+}
+
+@mixin row($start: 'auto', $end) {
+  grid-row: #{$start} / span #{$end};
+}
