@@ -17,7 +17,9 @@
   </head>
   <body>
     {{!-- Uncomment when header component is created in Contentful --}}
-    {{{module header}}}
+    {{#if header}}
+      {{{module header}}}
+    {{/if}}
 
     <main>
       {{#each components}}
