@@ -47,11 +47,14 @@
   justify-content: space-between;
   position: relative;
   display: flex;
-  margin-top: 11rem;
+  margin-top: 5rem;
 }
 
 .person_card__container {
   display: flex;
+  @include breakpoint(md) {
+    display: block;
+  }
 }
 
 .person_card__image_card {
@@ -67,7 +70,7 @@
   width: 34.6rem;
   height: 14.7rem;
   position: absolute;
-  bottom: 0;
+  bottom: 1.1rem;
   overflow: hidden;
   border-radius: 0 0 2.4rem 2.4rem;
 }
@@ -80,7 +83,7 @@
   height: 4rem;
   top: 38.5rem;
   text-align: center;
-  color: #fff;
+  color: var(--white);
 }
 
 .person_card__subtitle_image {
@@ -91,7 +94,7 @@
   height: 2.4rem;
   bottom: 2.4rem;
   text-align: center;
-  color: #fff;
+  color: var(--white);
 }
 
 .person_card__quote_image {
@@ -102,10 +105,21 @@
   text-align: center;
   margin: 0 auto;
   position: absolute;
-  top: calc(100% + 6rem);
+  top: calc(100% + 5rem);
   left: 50%;
   transform: translateX(-50%);
-  color: #576684;
+  color: var(--grey-2);
+
+  @include breakpoint(md) {
+    display: block;
+  }
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+.person_card__quote_image.active {
+  display: block;
 }
 
 .quotation_marks__container {
