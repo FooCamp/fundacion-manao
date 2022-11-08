@@ -1,0 +1,129 @@
+.statistics {
+  position: relative;
+  display: block;
+  z-index: 1;
+
+  &__container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    background-color: var(--brand-navy);
+
+    @include breakpoint(md) {
+      padding-top: 15.8rem;
+      padding-bottom: 15.8rem;
+    }
+  }
+
+  &__headlines {
+    @include grid;
+  }
+
+  &__eyebrow {
+    @include col(3, 4);
+
+    justify-content: center;
+    display: flex;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: var(--font-bold);
+    letter-spacing: 0.2em;
+    line-height: 1.6rem;
+    margin: 0;
+
+    @include breakpoint(md) {
+      @include col(5, 4);
+    }
+  }
+
+  &__title {
+    @include heading-3;
+    @include col(3, 4);
+
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: var(--white);
+    padding-top: 1rem;
+    margin: 0;
+
+    @include breakpoint(md) {
+      @include col(5, 4);
+
+      padding-top: 0.8rem;
+    }
+  }
+
+  &__items {
+    @include grid;
+
+    grid-template-columns: 1fr;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6.4rem;
+    margin: 0;
+
+    @include breakpoint(md) {
+      padding-top: 8.8rem;
+    }
+  }
+
+  &__value {
+    color: var(--brand-magenta);
+    font-size: 12rem;
+    font-weight: var(--font-bold);
+    line-height: 10rem;
+    text-align: center;
+    letter-spacing: -0.03em;
+  }
+
+  &__text {
+    @include body-m-reg;
+
+    color: var(--grey-4);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding-top: 0.8rem;
+  }
+
+  &__bg {
+    // background-image: url(/static/images/background-shape.svg);
+    fill: var(--brand-navy);
+    display: block;
+    position: relative;
+    background-color: transparent;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: -2px;
+    z-index: -1;
+    height: 4.3rem;
+
+    @include breakpoint(md) {
+      height: 16.4rem;
+    }
+
+    &::after {
+      content: '';
+      fill: var(--brand-navy);
+      display: block;
+      background-image: url('/static/images/background-shape.svg');
+      background-color: transparent;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 14rem;
+
+      @include breakpoint(md) {
+        height: 25rem;
+      }
+    }
+  }
+}
