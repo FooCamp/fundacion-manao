@@ -101,11 +101,10 @@
     // Moblie
     @include col(auto, 8);
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2.4rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     row-gap: 2.4rem;
-    justify-items: center;
 
     &--img {
       max-width: 13.548rem;
