@@ -1,0 +1,29 @@
+<section class="about_us">
+  <h2 class="about_us__eyebrow">
+    {{eyebrow}}
+  </h2>
+    <h3 class="about_us__heading">
+      {{title}}
+    </h3>
+      <p class="about_us__description">
+        {{description}}
+      </p>
+</section>
+
+<section class="person_card">
+  <div class="person_card__cards_grid">
+  {{#each personCard}}
+    {{{module this}}}
+  {{/each}}
+  </div>
+</section>
+
+<div class="quotation_marks__container">
+  <div class="quotation_marks__open">
+      <img src="/images/quotation_open.svg" alt="">
+  </div>
+  <div class="quotation_marks__close">
+      <img src="/images/quotation_close.svg" alt="">
+  </div>
+</div>
+
