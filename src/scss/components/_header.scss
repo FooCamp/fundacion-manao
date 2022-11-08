@@ -50,6 +50,7 @@
 
     &__item:nth-last-child(2) {
       border-bottom: 1px solid var(--grey-1);
+      margin: 32px 0 0;
 
       & .link {
         display: none;
