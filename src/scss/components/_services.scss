@@ -7,7 +7,7 @@
   padding: 16rem 0;
   overflow: hidden;
   @include breakpoint(md) {
-    padding: 25.6rem 0 38rem;
+    padding: 25.6rem 0 35.6rem;
   }
 
   &-container {
@@ -38,7 +38,6 @@
 
   &-title {
     @include heading-3;
-
     margin: 0 0 3.2rem;
 
     // Desktop
@@ -82,7 +81,7 @@
     @include breakpoint(md) {
       flex-direction: column;
       width: calc(25% - 6.6rem);
-      padding: 2.4rem;
+      padding: 3.2rem 2.4rem;
       transition: var(--transition);
 
       img {
