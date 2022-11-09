@@ -26,6 +26,7 @@ const main = () => {
     if (navMenu.classList.contains(CLASSES.active)) {
       // Disable scroll
       body.style.overflow = STYLES.hidden
+      navMenu.scrollTop = 0
     } else {
       // Enable scroll
       body.removeAttribute('style')
