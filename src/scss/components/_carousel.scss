@@ -6,7 +6,6 @@
   @include grid;
 
   position: relative;
-  height: 0;
 }
 
 .carousel {
@@ -22,7 +21,11 @@
   &-overlap {
     z-index: var(--z-index-mid);
     position: relative;
-    top: -100%;
+    margin-top: -24.3rem;
+
+    @include breakpoint(md) {
+      margin-top: -28.8rem;
+    }
   }
 
   &-container {
