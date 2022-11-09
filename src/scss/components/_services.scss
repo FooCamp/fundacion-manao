@@ -4,7 +4,7 @@
 
 .services {
   position: relative;
-  padding: 12rem 0 13.6rem;
+  padding: 16rem 0;
   overflow: hidden;
   @include breakpoint(md) {
     padding: 25.6rem 0 38rem;
@@ -12,6 +12,10 @@
 
   &-container {
     @include grid;
+    @include col(4, 6);
+    @include breakpoint(md) {
+      @include col(4, 6);
+    }
   }
 
   &-info {
@@ -45,6 +49,10 @@
 
   &-cards {
     @include col(1, 12);
+
+    @include breakpoint(md) {
+      @include col(2, 10);
+    }
 
     display: flex;
     justify-content: center;
@@ -165,7 +173,7 @@
       }
 
       img {
-        width: 3.2rem;
+        width: 3.8rem;
 
         // Desktop
         @include breakpoint(md) {
@@ -176,6 +184,7 @@
   }
 
   // background shapes
+
   &::before,
   &::after {
     display: block;
@@ -184,20 +193,21 @@
 
   &::before {
     content: url('/static/images/bg-a.svg');
-    top: -11rem;
-    left: -15.5rem;
-    width: 27rem;
-    transform: rotate(20deg);
+    top: 0;
+    top: -1rem;
+    left: -11rem;
+    width: 16.5rem;
+    transform: rotate(-16deg);
     @include breakpoint(md) {
-      width: 46rem;
-      top: -14rem;
-      left: -26rem;
+      width: 53rem;
+      left: -30rem;
+      transform: none;
     }
   }
 
   &::after {
     content: url('/static/images/bg-n.svg');
-    width: 15rem;
+    width: 20rem;
     bottom: -1rem;
     right: 0;
     @include breakpoint(md) {
