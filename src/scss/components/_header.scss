@@ -6,6 +6,7 @@
 
   &__container {
     align-items: center;
+    border-bottom: 1px solid var(--grey-6);
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -49,7 +50,7 @@
     }
 
     &__item:nth-last-child(2) {
-      border-bottom: 1px solid var(--grey-1);
+      border-bottom: 1px solid var(--grey-6);
       margin: 32px 0 0;
 
       & .link {
@@ -60,22 +61,17 @@
     &__donor-info {
       padding-top: 48px;
 
-      & h5 {
+      &--title {
         @include heading-5;
 
+        color: var(--brand-navy);
         margin: 0 0 8px;
       }
 
-      & h6 {
-        @include heading-6;
-
-        margin: 0;
-      }
-
-      & p {
+      &--text {
         @include body-m-reg;
 
-        margin: 0 0 16px;
+        color: var(--grey-2);
       }
     }
   }
@@ -120,6 +116,20 @@
     border-radius: 24px;
     padding: 24px;
 
+    &__name {
+      @include heading-6;
+
+      color: var(--white);
+      margin: 0;
+    }
+
+    &__number {
+      @include body-m-reg;
+
+      color: var(--grey-6);
+      margin: 0 0 16px;
+    }
+
     &__bancolombia {
       border-bottom: 1px solid var(--grey-1);
       padding-bottom: 30px;
@@ -131,12 +141,18 @@
 
     &__vaki {
       padding-top: 19px;
+
+      &--link {
+        color: var(--grey-6);
+        text-decoration: none;
+        border-bottom: 1px solid var(--grey-6);
+      }
     }
   }
 
   &__socials {
     align-items: center;
-    border-top: 1px solid var(--grey-1);
+    border-top: 1px solid var(--grey-6);
     display: flex;
     gap: 33px;
     justify-content: center;
