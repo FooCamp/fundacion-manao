@@ -20,7 +20,7 @@
     right: -85px;
   }
 
-  @include breakpoint(lg) {
+  @include breakpoint(md) {
     &__shape-a {
       transform: matrix(0.34, 0.94, 0.94, -0.34, 0, 0);
       width: 49.16rem;
@@ -45,9 +45,9 @@
   @include grid;
 
   padding-top: 16rem;
-  padding-bottom: 45.8rem;
+  padding-bottom: 16rem;
 
-  @include breakpoint(lg) {
+  @include breakpoint(md) {
     padding-top: 25.6rem;
     padding-bottom: 33.6rem;
   }
@@ -74,7 +74,7 @@
       line-height: 3.2rem;
     }
 
-    @include breakpoint(lg) {
+    @include breakpoint(md) {
       // Desktop
       @include col(4, 6);
 
@@ -115,7 +115,7 @@
       border: var(--grey-5) solid 0.1rem;
     }
 
-    @include breakpoint(lg) {
+    @include breakpoint(md) {
       // Desktop
       @include col(3, 8);
 
