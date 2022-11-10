@@ -29,6 +29,7 @@
     letter-spacing: 0.2em;
     line-height: 1.6rem;
     margin: 0;
+    text-transform: uppercase;
 
     @include breakpoint(md) {
       @include col(5, 4);
@@ -56,14 +57,14 @@
   &__items {
     @include grid;
 
-    grid-template-columns: 1fr;
-
     @include breakpoint(md) {
       grid-template-columns: repeat(4, 1fr);
     }
   }
 
   &__item {
+    @include col(2, 6);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +72,7 @@
     margin: 0;
 
     @include breakpoint(md) {
+      grid-column: auto;
       padding-top: 8.8rem;
     }
   }
@@ -91,10 +93,10 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     padding-top: 0.8rem;
+    text-align: center;
   }
 
   &__bg {
-    // background-image: url("/static/images/background-shape.svg");
     fill: var(--brand-navy);
     display: block;
     position: relative;
@@ -122,7 +124,7 @@
       height: 14rem;
 
       @include breakpoint(md) {
-        height: 25rem;
+        height: 12vw;
       }
     }
   }

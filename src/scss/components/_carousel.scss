@@ -2,8 +2,10 @@
   --time-transitions: 0.3s;
 }
 
-.general-container {
+.carousel-general {
   @include grid;
+
+  position: relative;
 }
 
 .carousel {
@@ -13,15 +15,21 @@
     @include col(4, 6);
   }
 
-  &-overlap {
-    z-index: var(--z-index-mid);
-  }
-
   display: flex;
   align-items: flex-end;
 
+  &-overlap {
+    z-index: var(--z-index-mid);
+    position: relative;
+    margin-top: -24.3rem;
+
+    @include breakpoint(md) {
+      margin-top: -28.8rem;
+    }
+  }
+
   &-container {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.8rem;
   }
 }
 
@@ -71,8 +79,9 @@
 .review {
   @include body-m-reg;
 
-  margin: 0;
+  color: var(--grey-2);
   text-align: center;
+  margin: 0;
   @include breakpoint(md) {
     @include body-xl-med;
   }
@@ -84,12 +93,14 @@
   &__name-title {
     @include heading-5;
 
+    color: var(--brand-navy);
     text-align: center;
   }
 
   &__name-subtitle {
     @include body-s-reg;
 
+    color: var(--grey-2);
     font-style: italic;
     text-align: center;
   }

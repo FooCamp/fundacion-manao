@@ -14,7 +14,7 @@
   &__sub-container {
     @include col(1, 4);
 
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
       @include col(2, 5);
 
       align-self: center;
@@ -80,7 +80,7 @@
   &__image {
     @include col(1, 4);
 
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
       @include col(7, 5);
 
       border-radius: 2.4rem;
@@ -109,19 +109,21 @@
 
     background-color: transparent;
     border: none;
+    cursor: pointer;
     flex: 1;
     padding: 0;
     text-align: left;
-    cursor: pointer;
   }
 
   &__cta-border {
     background-color: var(--brand-blue);
     border-radius: 1rem;
+    bottom: -20px;
     display: none;
-    height: 0.4rem;
-    margin-top: 1.6rem;
+    height: 0.2rem;
+    margin-top: 0;
     margin-bottom: 0;
+    position: absolute;
     width: 100%;
 
     &.cta--blue {
@@ -139,14 +141,18 @@
 
   &__cta-container {
     @include grid;
+
+    margin-bottom: 4rem;
   }
 
   &__cta-sub-container {
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
       @include col(auto, 3);
 
+      align-self: flex-start;
       display: flex;
       flex-direction: column;
+      position: relative;
 
       &:nth-child(3n + 1) {
         grid-column-start: 2;
@@ -205,18 +211,18 @@
   }
 
   .shape2 {
-    height: 64.6133rem;
+    height: 76.613rem;
     opacity: 1;
-    right: -40rem;
-    top: 5rem;
-    transform: rotate(168.55deg);
+    right: -35rem;
+    top: -3rem;
+    transform: rotate(167.55deg);
     width: 65.478rem;
   }
 
   .shape3 {
-    height: 59.064rem;
+    height: 93.064rem;
     left: -45rem;
-    top: 27rem;
+    top: 12rem;
     transform: rotate(-100.29deg);
     width: 53.343rem;
   }
@@ -230,17 +236,17 @@
   }
 
   .shape5 {
-    height: 64.926rem;
+    height: 80.926rem;
     left: -50rem;
-    top: 3rem;
+    top: -5rem;
     transform: rotate(-71.15deg);
     width: 61.04rem;
   }
 
   .shape6 {
-    height: 50.802rem;
-    right: -36rem;
-    top: 30rem;
+    height: 65.802rem;
+    right: -33rem;
+    top: 33rem;
     transform: rotate(121.85deg);
     width: 47.762rem;
   }
