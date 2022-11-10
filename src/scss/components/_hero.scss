@@ -14,7 +14,7 @@
   &__sub-container {
     @include col(1, 4);
 
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
       @include col(2, 5);
 
       align-self: center;
@@ -80,10 +80,9 @@
   &__image {
     @include col(1, 4);
 
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
       @include col(7, 5);
 
-      aspect-ratio: 1;
       border-radius: 2.4rem;
       grid-row: 1;
       opacity: 0;
@@ -110,19 +109,21 @@
 
     background-color: transparent;
     border: none;
+    cursor: pointer;
     flex: 1;
     padding: 0;
     text-align: left;
-    cursor: pointer;
   }
 
   &__cta-border {
     background-color: var(--brand-blue);
     border-radius: 1rem;
+    bottom: -20px;
     display: none;
-    height: 0.4rem;
-    margin-top: 1.6rem;
+    height: 0.2rem;
+    margin-top: 0;
     margin-bottom: 0;
+    position: absolute;
     width: 100%;
 
     &.cta--blue {
@@ -145,11 +146,13 @@
   }
 
   &__cta-sub-container {
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
       @include col(auto, 3);
 
+      align-self: flex-start;
       display: flex;
       flex-direction: column;
+      position: relative;
 
       &:nth-child(3n + 1) {
         grid-column-start: 2;
