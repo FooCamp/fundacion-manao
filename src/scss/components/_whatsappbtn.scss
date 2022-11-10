@@ -2,6 +2,7 @@
   position: fixed;
   right: 21.65px;
   bottom: 21.65px;
+  z-index: var(--z-index-top);
 
   &__green-background {
     width: 3.2rem;
