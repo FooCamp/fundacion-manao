@@ -4,12 +4,14 @@
 }
 
 .donors_info {
-  @include grid;
-
   display: block;
+  @include breakpoint(md) {
+    @include grid;
+  }
 }
 
 .donors_image {
+  line-height: 0;
   width: 100%;
 }
 
@@ -18,8 +20,9 @@
 
   font-size: 3rem;
   font-weight: var(--font-med);
-
+  padding: 2rem 1.5rem;
   @include breakpoint(md) {
+    padding: 0;
     @include col(2, 7);
   }
 }
@@ -29,12 +32,15 @@
 
   display: flex;
   justify-content: space-around;
-  padding: 2.5rem 0 19.5rem;
+  padding-bottom: 19.5rem;
 
   @include breakpoint(md) {
-    @include col(2, 4);
+    @include col(2, 5);
 
     justify-content: flex-start;
+  }
+  @include breakpoint(lg) {
+    @include col(2, 4);
   }
 }
 
@@ -66,6 +72,7 @@
   display: none;
 
   @include breakpoint(md) {
+    display: block;
     position: absolute;
     z-index: 1;
     bottom: 7rem;
