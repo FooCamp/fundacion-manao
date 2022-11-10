@@ -48,6 +48,7 @@
 
     @include breakpoint(md) {
       @include col(5, 4);
+
       padding-top: 0.8rem;
     }
   }
@@ -93,7 +94,7 @@
   }
 
   &__bg {
-    // background-image: url(/static/images/background-shape.svg);
+    // background-image: url("/static/images/background-shape.svg");
     fill: var(--brand-navy);
     display: block;
     position: relative;
@@ -112,7 +113,7 @@
       content: '';
       fill: var(--brand-navy);
       display: block;
-      background-image: url(/static/images/background-shape.svg);
+      background-image: url('/static/images/background-shape.svg');
       background-color: transparent;
       background-size: contain;
       background-repeat: no-repeat;
