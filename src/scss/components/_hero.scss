@@ -1,3 +1,63 @@
+.char-m {
+  &.shape-1 {
+    transform: rotate(156.19deg) scale(21);
+    left: 56px;
+    top: -124px;
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+
+  &.shape-2 {
+    transform: rotate(168.55deg) scale(21);
+    right: -55px;
+    top: 304px;
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+}
+
+.char-a1 {
+  &.shape-1 {
+    transform: rotate(-100.29deg) scale(24);
+    left: -219px;
+    top: 534px;
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+
+  &.shape-2 {
+    transform: rotate(62.36deg) scale(23);
+    right: -208px;
+    top: 211px;
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+}
+
+.char-a2 {
+  &.shape-1 {
+    transform: rotate(-71.15deg) scale(26);
+    left: -237px;
+    top: 322px;
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+
+  &.shape-2 {
+    transform: rotate(121.85deg) scale(20);
+    right: -111px;
+    top: 588px;
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+}
+
 .hero {
   min-width: 375px;
   position: relative;
