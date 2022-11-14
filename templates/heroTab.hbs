@@ -1,11 +1,11 @@
-<div class="hero__wrapper">
-<div class="hero__sub-container">
-  <h2 class="hero__title heading-2">{{title}}</h2>
-  <div class="hero__link {{#if shapeColor}}link--{{shapeColor}}{{/if}}">{{{module cta}}}</div>
-</div>
-<img class="hero__image" src="{{assetSrc image}}" alt="{{assetTitle image}}">
-</div>
-
-
+<li class="hero__cards__card">
+  <div class="hero__card-content">
+    <div class="hero__card-content__text">{{title}}</div>
+    <button class="hero__card-content__cta {{#if shapeColor}}link--{{shapeColor}}{{/if}}">
+    {{{module cta}}}
+    </button>
+  </div>
+  <img src="{{assetSrc image}}" alt="{{assetTitle image}}" class="hero__card-content__image">
+</li>
 
 

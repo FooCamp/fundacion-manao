@@ -1,16 +1,23 @@
-<section>
-  <div class="hero">
-    <div class="hero__main-container">
-      {{#each tabs}}
-        {{{module this}}}
-      {{/each}}
+<section class="hero">
+  <div class="hero__shapes">
+      <img src="/images/shape01.svg" alt="" class="hero__shapes__shape">
+      <img src="/images/shape02.svg" alt="" class="hero__shapes__shape">
+      <img src="/images/shape03.svg" alt="" class="hero__shapes__shape">
+  </div>
+  <div class="hero__wrapper">
+    <div class="hero__container">
+      <ul class="hero__cards">
+        {{#each tabs}}
+          {{{module this}}}
+        {{/each}}
+
+      </ul>
     </div>
-    <div class="hero__cta-container">
+    <ul class="hero__tabs">
       {{#each tabButtons}}
         {{{module this}}}
       {{/each}}
-    </div>
-    <img class="hero__shape shape1" src="/images/Shape-M.svg" alt="" role="presentation">
-    <img class="hero__shape shape2" src="/images/Shape-M.svg" alt="" role="presentation">
-</div>
+    </ul>
+
+  </div>
 </section>
