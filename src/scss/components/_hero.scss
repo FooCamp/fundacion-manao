@@ -87,6 +87,7 @@
       grid-row: 1;
       opacity: 0;
       transition: opacity 0.2s ease;
+      height: calc(5 * ((min(1440px, 100vw) - 624px) / 12) + 192px);
 
       &:first-of-type {
         opacity: 1;
@@ -246,7 +247,7 @@
   .shape6 {
     height: 65.802rem;
     right: -33rem;
-    top: 33rem;
+    top: 28rem;
     transform: rotate(121.85deg);
     width: 47.762rem;
   }
