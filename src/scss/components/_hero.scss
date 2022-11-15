@@ -61,6 +61,7 @@
 .hero {
   min-width: 375px;
   position: relative;
+  overflow: hidden;
 
   &__shapes {
     display: none;
