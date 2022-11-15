@@ -1,21 +1,26 @@
-const CLASSES = {
-  active: 'active',
-}
 const main = () => {
-  function getBlockQuote(item) {
-    return item.querySelector('.person_card__quote_image')
+  const main_quote = document.querySelectorAll('.quote__main')[0]
+
+  function setBlockQuote(text) {
+    main_quote.innerHTML = text
+  }
+
+  function getQuoteText(item) {
+    return item.querySelector('.quote__person_card').innerHTML
   }
 
   const person_cards = document.querySelectorAll('.person_card__container')
-  getBlockQuote(person_cards[0]).classList.add(CLASSES.active)
+  // Default quote
+  setBlockQuote(getQuoteText(person_cards[0]))
+  // Add event listener per card
   person_cards.forEach(function (item) {
     item.addEventListener('mouseenter', () => {
-      getBlockQuote(person_cards[0]).classList.remove(CLASSES.active)
-      getBlockQuote(item).classList.add(CLASSES.active)
+      // Write card quote
+      setBlockQuote(getQuoteText(item))
     })
     item.addEventListener('mouseleave', () => {
-      getBlockQuote(item).classList.remove(CLASSES.active)
-      getBlockQuote(person_cards[0]).classList.add(CLASSES.active)
+      // Write default quote
+      setBlockQuote(getQuoteText(person_cards[0]))
     })
   })
 }
