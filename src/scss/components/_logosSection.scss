@@ -17,7 +17,7 @@
     height: 148.31px;
     position: absolute;
     top: 468.64px;
-    left: 349px;
+    right: -85px;
   }
 
   @include breakpoint(md) {
@@ -36,7 +36,7 @@
       height: 523.62px;
       position: absolute;
       top: 35rem;
-      left: 124rem;
+      right: -351px;
     }
   }
 }
@@ -45,7 +45,7 @@
   @include grid;
 
   padding-top: 16rem;
-  padding-bottom: 45.8rem;
+  padding-bottom: 16rem;
 
   @include breakpoint(md) {
     padding-top: 25.6rem;
@@ -86,11 +86,12 @@
       &--title {
         margin-top: 0;
         margin-bottom: 0.8rem;
-        letter-spacing: 0.2rem;
         text-transform: uppercase;
       }
 
       &--description {
+        @include heading-3;
+
         margin-top: 0;
         margin-bottom: 0;
       }
@@ -128,6 +129,7 @@
 
         max-width: 16.4rem;
         max-height: 5.8rem;
+        border: 0;
       }
     }
   }
