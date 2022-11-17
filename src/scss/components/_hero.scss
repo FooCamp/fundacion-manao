@@ -148,12 +148,10 @@
       padding: 72px 0 40px;
       position: relative;
 
-
       &::after {
         display: none;
       }
     }
-
 
     &__card {
       display: flex;
@@ -321,8 +319,6 @@
   background: var(--brand-green);
 }
 
-
 .cta--magenta.tab-active::after {
   background: var(--brand-magenta);
-
 }
