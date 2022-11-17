@@ -11,6 +11,7 @@ const SELECTORS = {
 }
 
 const main = () => {
+  // donation button
   const openModal = document.querySelectorAll(SELECTORS.openModal)[
     document.querySelectorAll(SELECTORS.openModal).length - 1
   ]
@@ -18,7 +19,6 @@ const main = () => {
   const modal = document.querySelector(SELECTORS.modal)
   const modalBg = document.querySelector(SELECTORS.modalBg)
   const closeModal = document.querySelector(SELECTORS.closeModal)
-  const body = document.body
 
   // open modal
   openModal.addEventListener('click', function (event) {
@@ -38,7 +38,7 @@ const main = () => {
 
   const showModal = () => {
     modal.classList.add(CLASSES.activeModal)
-    body.classList.add(CLASSES.stopScrolling)
+    // body.classList.add(CLASSES.stopScrolling)
 
     // autofocus on X icon
     closeModal.focus()
@@ -47,13 +47,33 @@ const main = () => {
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         hideModal()
+        enableScroll()
       }
     })
+
+    //disable scroll
+    disableScroll()
   }
 
   const hideModal = () => {
     modal.classList.remove(CLASSES.activeModal)
-    body.classList.remove(CLASSES.stopScrolling)
+    enableScroll()
+  }
+
+  const disableScroll = () => {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    ;(scrollLeft = window.pageXOffset || document.documentElement.scrollLeft)(
+      // if any scroll is attempted,
+      // set this to the previous value
+      (window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop)
+      })
+    )
+  }
+
+  const enableScroll = () => {
+    window.onscroll = () => {}
   }
 }
 
