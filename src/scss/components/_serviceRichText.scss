@@ -24,14 +24,17 @@
   }
 
   > ul {
-    > li {
-      @include body-m-reg;
-
-      color: var(--grey-2);
-      margin: 0;
-    }
-
-    list-style-type: disc;
+    margin: 0;
     padding-top: 0.8rem;
+
+    > li {
+      > p {
+        color: var(--grey-2);
+        @include body-m-reg;
+
+        margin: 0;
+        list-style-type: disc;
+      }
+    }
   }
 }
