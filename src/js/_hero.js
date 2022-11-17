@@ -1,123 +1,68 @@
-// Adding classes Oject
-
 const CLASSES = {
-  active: 'active',
-  inactive: 'inactive',
-  shape: 'hero__shape',
-  shapes: ['shape1', 'shape2', 'shape3', 'shape4', 'shape5', 'shape6'],
+  tabActive: 'tab-active',
+  cardActive: 'card-active',
+  shapeActive: 'shape-active',
 }
 
-const ASSETS = {
-  shapeImages: [
-    '/images/Shape-M.svg',
-    '/images/Shape-A-Green.svg',
-    'images/Shape-A-Magenta.svg',
-  ],
-}
-
-//Adding function to toggle visibility
-
-const toggleElementsVisibility = (
-  item,
-  index,
-  activeIndex,
-  shouldSetupA11y = false
-) => {
-  if (activeIndex !== index) {
-    item.classList.remove(CLASSES.active)
-    item.classList.add(CLASSES.inactive)
-    if (shouldSetupA11y) {
-      const anchor = item.querySelector('.link')
-      item.setAttribute('aria-hidden', true)
-      anchor?.setAttribute('tabindex', -1)
-    }
-  } else {
-    item.classList.add(CLASSES.active)
-    item.classList.remove(CLASSES.inactive)
-    if (shouldSetupA11y) {
-      const anchor = item.querySelector('.link')
-      item.setAttribute('aria-hidden', false)
-      anchor?.setAttribute('tabindex', 0)
-    }
-  }
-}
-
-//Adding function to change Hero Shapes
-
-const changeShapes = (index, container) => {
-  let indexIteratorOne = 2 * (index + 1) - 2
-  let indexIteratorTwo = 2 * (index + 1) - 1
-  if (
-    !container[0].classList.contains(CLASSES.shapes[indexIteratorOne]) &&
-    !container[1].classList.contains(CLASSES.shapes[indexIteratorTwo])
-  ) {
-    container[0].setAttribute('src', ASSETS.shapeImages[index])
-    container[1].setAttribute('src', ASSETS.shapeImages[index])
-    container[0].className = ''
-    container[1].className = ''
-    container[0].classList.add(
-      CLASSES.shape,
-      CLASSES.shapes[indexIteratorOne],
-      CLASSES.active
-    )
-    container[1].classList.add(
-      CLASSES.shape,
-      CLASSES.shapes[indexIteratorTwo],
-      CLASSES.active
-    )
-  }
+const SELECTORS = {
+  tabs: '.hero__tabs__tab',
+  cards: '.hero__cards__card',
+  barScroll: '.hero__cards',
+  shapes: '.hero__shapes__shape',
 }
 
 const main = () => {
-  //Defining selectors as constants.
+  const scrollPos = document.querySelector(SELECTORS.barScroll)
+  const tabs = document.querySelectorAll(SELECTORS.tabs)
+  const cards = document.querySelectorAll(SELECTORS.cards)
+  const shapes = document.querySelectorAll(SELECTORS.shapes)
 
-  const ctas = document.querySelectorAll('.hero__cta')
-  const ctasSubcontainer = document.querySelectorAll('.hero__cta-sub-container')
-  const heroSubcontainer = document.querySelectorAll('.hero__sub-container')
-  const heroImage = document.querySelectorAll('.hero__image')
-  const heroShape = document.querySelectorAll('.hero__shape')
+  const numTabs = tabs.length
+  const widthScroll = scrollPos.offsetWidth
+  const lengthScroll = scrollPos.scrollWidth
+  const realOffset = (lengthScroll - widthScroll) / (numTabs - 1)
 
-  //Adding function to include accesibility atributes
+  tabs[0].classList.add(CLASSES.tabActive)
+  cards[0].classList.add(CLASSES.cardActive)
+  shapes[0].classList.add(CLASSES.shapeActive)
 
-  const setUpInitialA11y = () => {
-    heroSubcontainer.forEach((item, index) => {
-      if (index === 0) {
-        item.setAttribute('aria-hidden', false)
-      } else {
-        const anchor = item.querySelector('.link')
-        item.setAttribute('aria-hidden', true)
-        if (anchor) {
-          anchor.setAttribute('tabindex', -1)
-        }
-      }
-    })
+  scrollPos.scrollLeft = 0
 
-    heroImage.forEach((item, index) => {
-      item.setAttribute('aria-hidden', index !== 0)
+  const removeClass = () => {
+    tabs.forEach((nada, i) => {
+      tabs[i].classList.remove(CLASSES.tabActive)
+      cards[i].classList.remove(CLASSES.cardActive)
+      shapes[i].classList.remove(CLASSES.shapeActive)
     })
   }
 
-  ctas.forEach((cta, index) => {
-    cta.addEventListener('click', () => {
-      //Removing active class to the elements without the index of the current element
+  const activeClass = (i) => {
+    tabs[i].classList.add(CLASSES.tabActive)
+    cards[i].classList.add(CLASSES.cardActive)
+    shapes[i].classList.add(CLASSES.shapeActive)
+  }
 
-      heroSubcontainer.forEach((item, itemIndex) => {
-        toggleElementsVisibility(item, itemIndex, index, true)
-      })
-
-      heroImage.forEach((item, itemIndex) => {
-        toggleElementsVisibility(item, itemIndex, index, true)
-      })
-
-      ctasSubcontainer.forEach((item, itemIndex) => {
-        toggleElementsVisibility(item, itemIndex, index)
-      })
-
-      changeShapes(index, heroShape)
-    })
+  scrollPos.addEventListener('scroll', () => {
+    let test = scrollPos.scrollLeft / realOffset
+    if (test < 0.5) {
+      removeClass()
+      activeClass(0)
+    } else if (test > 0.5 && test < 1.5) {
+      removeClass()
+      activeClass(1)
+    } else if (test > 1.5) {
+      removeClass()
+      activeClass(2)
+    }
   })
 
-  setUpInitialA11y()
+  tabs.forEach((actualTab, i) => {
+    actualTab.addEventListener('click', () => {
+      removeClass()
+      activeClass(i)
+      scrollPos.scrollLeft = realOffset * i
+    })
+  })
 }
 
 main()
