@@ -30,7 +30,7 @@
     left: -100%;
     padding: 4.8rem 2.4rem;
     position: fixed;
-    top: 70px;
+    top: 80px;
     transition: 0.3s;
     width: 100%;
     height: 100vh;
@@ -51,7 +51,7 @@
 
     &__item:nth-last-child(2) {
       border-bottom: 1px solid var(--grey-6);
-      margin: 32px 0 0;
+      margin: 0;
 
       & .link {
         display: none;
@@ -59,7 +59,8 @@
     }
 
     &__donor-info {
-      padding-top: 48px;
+      padding: 32px 0 12px;
+      margin-bottom: 24px;
 
       &--title {
         @include heading-5;
@@ -70,7 +71,7 @@
 
       &--text {
         @include body-m-reg;
-
+        margin-bottom: 24px;
         color: var(--grey-2);
       }
     }
@@ -83,7 +84,7 @@
   display: block;
   cursor: pointer;
 }
-//remove scroll when open hamburger mobile menu
+//remove scroll when open hamburger mobile
 body.lock-scroll {
   touch-action: none;
   overflow: hidden;
@@ -124,6 +125,7 @@ body.lock-scroll {
     background-color: var(--brand-navy);
     border-radius: 24px;
     padding: 24px;
+    margin-bottom: 24px;
 
     &__name {
       @include heading-6;
@@ -136,12 +138,12 @@ body.lock-scroll {
       @include body-m-reg;
 
       color: var(--grey-6);
-      margin: 0 0 16px;
+      margin: 0;
     }
 
     &__bancolombia {
       border-bottom: 1px solid var(--grey-1);
-      padding-bottom: 30px;
+      padding-bottom: 24px;
     }
 
     &__bancolombia img {
@@ -165,8 +167,7 @@ body.lock-scroll {
     display: flex;
     gap: 33px;
     justify-content: center;
-    padding: 24px;
-    margin-top: 48px;
+    padding-bottom: 24px;
 
     &__icons {
       color: var(--brand-navy);
