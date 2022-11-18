@@ -83,6 +83,15 @@
   display: block;
   cursor: pointer;
 }
+//remove scroll when open hamburger mobile menu
+body.lock-scroll {
+  touch-action: none;
+  overflow: hidden;
+
+  @include breakpoint(md) {
+    overflow: auto;
+  }
+}
 
 .bar {
   background-color: var(--black);

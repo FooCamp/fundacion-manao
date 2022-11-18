@@ -1,10 +1,11 @@
 const CLASSES = {
   active: 'active',
+  openMobileMenu: 'lock-scroll',
 }
 
-const STYLES = {
-  hidden: 'hidden',
-}
+// const STYLES = {
+//   hidden: 'hidden',
+// }
 
 const SELECTORS = {
   hamburger: '.hamburger',
@@ -25,11 +26,13 @@ const main = () => {
 
     if (navMenu.classList.contains(CLASSES.active)) {
       // Disable scroll
-      body.style.overflow = STYLES.hidden
+      // body.style.overflow = STYLES.hidden
+      body.classList.add(CLASSES.openMobileMenu)
       navMenu.scrollTop = 0
     } else {
       // Enable scroll
-      body.removeAttribute('style')
+      // body.removeAttribute('style')
+      body.classList.remove(CLASSES.openMobileMenu)
     }
   }
   link.forEach((item) => {
