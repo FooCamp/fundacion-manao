@@ -35,7 +35,7 @@
       width: 90%;
       height: 90%;
       width: 88rem;
-      height: 52.4rem;
+      height: 44.3rem;
       border-radius: 2.4rem;
       background: #fff;
       opacity: 0;
@@ -46,6 +46,12 @@
       flex: 0 50%;
       border-radius: 24px 0px 0px 24px;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      img {
+        width: fit-content;
+        max-width: fit-content;
+      }
     }
     &__description {
       flex: 0 50%;
