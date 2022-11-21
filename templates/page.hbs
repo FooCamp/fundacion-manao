@@ -19,6 +19,11 @@
     {{!-- Uncomment when header component is created in Contentful --}}
     {{#if header}}
       {{{module header}}}
+
+      {{#if donationInfo}}
+        {{{module donationInfo}}}
+      {{/if}}
+
     {{/if}}
 
     <main>
@@ -29,10 +34,6 @@
 
     {{#if whatsAppButton}}
     {{{module whatsAppButton}}}
-    {{/if}}
-
-    {{#if donationInfo}}
-    {{{module donationInfo}}}
     {{/if}}
 
     <script src="main.bundle.js"></script>
