@@ -31,6 +31,9 @@
     & > .tab__name {
       @include body-xl-reg;
 
+      background-color: transparent;
+      border: none;
+      color: var(--brand-navy);
       cursor: pointer;
 
       &:last-child {
