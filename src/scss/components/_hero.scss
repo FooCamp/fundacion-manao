@@ -148,12 +148,10 @@
       padding: 72px 0 40px;
       position: relative;
 
-
       &::after {
         display: none;
       }
     }
-
 
     &__card {
       display: flex;
@@ -168,6 +166,7 @@
         margin-right: 20%;
       }
       @include breakpoint(md) {
+        display: none;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
@@ -189,6 +188,7 @@
     & .card-active {
       @include breakpoint(md) {
         opacity: 1;
+        display: flex;
         position: relative;
         transition: 0.5s;
       }
@@ -283,11 +283,11 @@
       left: 0;
       position: absolute;
       right: 0;
-      background: var(--grey-6);
+      background: var(--white);
     }
 
     @include breakpoint(md) {
-      @include heading-6;
+      @include body-m-reg;
 
       color: var(--grey-2);
     }
@@ -321,8 +321,6 @@
   background: var(--brand-green);
 }
 
-
 .cta--magenta.tab-active::after {
   background: var(--brand-magenta);
-
 }
