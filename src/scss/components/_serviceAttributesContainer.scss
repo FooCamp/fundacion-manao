@@ -6,30 +6,42 @@
     @include col(auto, 8);
 
     background-color: var(--brand-navy);
-    width: 28.8rem;
-    height: 44.6rem;
+    width: 32.7rem;
+    height: 45.6rem;
     margin-top: 65rem;
     border-radius: 2.4rem;
-    margin-left: 2.1rem;
 
     &__attribute-section {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin-top: 2.4rem;
-      margin-bottom: 12rem;
+      max-width: 27.9rem;
+      margin-left: 2.4rem;
+      margin-right: 2.4rem;
+
+      &--box {
+        width: 27.9rem;
+        height: 2.4rem;
+      }
 
       &--title {
         @include body-m-reg;
 
         color: var(--grey-5);
+        text-align: center;
         margin-bottom: 0.4rem;
+        margin-top: 2.4rem;
       }
 
       &--value {
         @include body-m-bold;
 
         color: var(--white);
+        text-align: center;
+        letter-spacing: -0.03em;
+      }
+
+      &--value:nth-child(4) {
+        height: 4.2rem;
       }
     }
 
@@ -38,22 +50,30 @@
       align-items: center;
       background-color: var(--grey-1);
       border: var(--grey-1) solid 0.1rem;
-      width: 24.9rem;
+      width: 27.9rem;
       height: 0;
-      margin-top: -9.4rem;
-      margin-left: 2.1rem;
+      margin-top: 4.4rem;
+      margin-left: 2.4rem;
     }
+  }
 
-    &__link-date {
-      display: flex;
-      align-items: center;
-      width: 24.9rem;
-      height: 4.8rem;
-      background-color: var(--white);
-      border-radius: 10rem;
-      margin-left: 2.1rem;
-      margin-top: 2.1rem;
-    }
+  .link-date {
+    display: flex;
+    align-items: center;
+    width: 27.9rem;
+    height: 4.8rem;
+    background-color: var(--white);
+    border-radius: 10rem;
+    margin-left: 2.4rem;
+    margin-top: -7.2rem;
+    @include col(1, 7);
+  }
+
+  .link {
+    @include body-m-bold;
+
+    margin-left: -21rem;
+    margin-top: -6.2rem;
   }
 
   // Desktop
@@ -64,7 +84,7 @@
       background-color: var(--brand-navy);
       width: 30rem;
       height: 44.6rem;
-      margin-top: 106.4rem;
+      margin-top: 6.4rem;
       border-radius: 2.4rem;
       margin-left: 0.1rem;
 
@@ -76,17 +96,29 @@
         margin-bottom: 12rem;
         margin-left: 2.4rem;
 
+        &--box {
+          width: 23.6rem;
+          height: 1.9rem;
+        }
+
         &--title {
           @include body-m-reg;
 
           color: var(--grey-5);
           margin-bottom: 0.4rem;
+          margin-top: 2.4rem;
+          text-align: left;
         }
 
         &--value {
           @include body-m-bold;
 
           color: var(--white);
+          text-align: left;
+        }
+
+        &--value:nth-child(4) {
+          height: 4.2rem;
         }
       }
 
@@ -97,20 +129,28 @@
         border: var(--grey-1) solid 0.1rem;
         width: 25.2rem;
         height: 0;
-        margin-top: -9.4rem;
+        margin-top: -7.4rem;
         margin-left: 2.4rem;
       }
+    }
 
-      &__link-date {
-        display: flex;
-        align-items: center;
-        width: 25.2rem;
-        height: 4.8rem;
-        background-color: var(--white);
-        border-radius: 10rem;
-        margin-left: 2.4rem;
-        margin-top: 2.4rem;
-      }
+    .link-date {
+      display: flex;
+      align-items: center;
+      width: 25.2rem;
+      height: 4.8rem;
+      background-color: var(--white);
+      border-radius: 10rem;
+      margin-left: 2.4rem;
+      margin-top: -6.6rem;
+      @include col(2, 3);
+    }
+
+    .link {
+      @include body-m-bold;
+
+      margin-left: -24.6rem;
+      margin-top: -5.5rem;
     }
   }
 }
