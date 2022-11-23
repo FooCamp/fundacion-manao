@@ -8,9 +8,9 @@
 
 .richtext_container {
   > h3 {
-    color: var(--brand-navy);
     @include heading-5;
 
+    color: var(--brand-navy);
     margin: 0;
     padding-top: 1.6rem;
   }
@@ -24,16 +24,14 @@
   }
 
   > ul {
-    margin: 0;
-    padding-top: 0.8rem;
     list-style-type: disc;
+    padding-top: 0.8rem;
+    margin: 0 0 0 2rem;
 
     > li {
       > p {
         color: var(--grey-2);
         @include body-m-reg;
-
-        margin: 0;
       }
     }
   }
