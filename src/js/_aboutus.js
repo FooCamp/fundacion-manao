@@ -1,5 +1,10 @@
 const main = () => {
-  const main_quote = document.querySelectorAll('.quote__main')[0]
+  const main_quote = document.querySelector('.quote__main')
+
+  // conditional to prevent error when component is missing
+  if (!main_quote) {
+    return
+  }
 
   function setBlockQuote(text) {
     main_quote.innerHTML = text

@@ -13,6 +13,11 @@ const SELECTORS = {
 
 const main = () => {
   const scrollPos = document.querySelector(SELECTORS.barScroll)
+
+  // conditional to prevent error when component is missing
+  if (!scrollPos) {
+    return
+  }
   const tabs = document.querySelectorAll(SELECTORS.tabs)
   const cards = document.querySelectorAll(SELECTORS.cards)
   const shapes = document.querySelectorAll(SELECTORS.shapes)
