@@ -58,7 +58,9 @@
     }
   }
 
-  .link-date {
+  .link {
+    @include body-m-bold;
+
     display: flex;
     align-items: center;
     width: 27.9rem;
@@ -67,14 +69,8 @@
     border-radius: 10rem;
     margin-left: 2.4rem;
     margin-top: -7.2rem;
-    @include col(1, 7);
-  }
-
-  .link {
-    @include body-m-bold;
-
-    margin-left: -21rem;
-    margin-top: -6.2rem;
+    padding-left: 8.9rem;
+    @include col(1, 8);
   }
 
   // Desktop
@@ -136,7 +132,9 @@
       }
     }
 
-    .link-date {
+    .link {
+      @include body-m-bold;
+
       display: flex;
       align-items: center;
       width: 25.2rem;
@@ -145,14 +143,8 @@
       border-radius: 10rem;
       margin-left: 2.4rem;
       margin-top: -6.6rem;
+      padding-left: 7.9rem;
       @include col(2, 3);
-    }
-
-    .link {
-      @include body-m-bold;
-
-      margin-left: -24.6rem;
-      margin-top: -5.5rem;
     }
   }
 }
