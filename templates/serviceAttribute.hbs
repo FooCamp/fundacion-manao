@@ -2,6 +2,8 @@
 
 </p>
 
-<p class='container__attribute-section--value container__attribute-section--box'>{{values}}
+{{#each values}}
 
-</p>
+    <p class='container__attribute-section--value container__attribute-section--box'>{{{this}}}</p>
+      {{/each}}
+
