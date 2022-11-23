@@ -8,22 +8,29 @@ const SELECTORS = {
   tNames: '.tab__name',
   tImage: '.tab__image',
 }
-const tabN = document.querySelector(SELECTORS.tabN)
-const tabI = document.querySelector(SELECTORS.tabI)
-const namesErase = tabI.querySelectorAll(SELECTORS.tNames)
-const imagesErase = tabN.querySelectorAll(SELECTORS.tImage)
-const names = tabN.querySelectorAll(SELECTORS.tNames)
-const images = tabI.querySelectorAll(SELECTORS.tImage)
+const main = () => {
+  const tabN = document.querySelector(SELECTORS.tabN)
 
-const cleaner = () => {
+  // conditional to prevent error when component is missing
+  if (!tabN) {
+    return
+  }
+
+  const tabI = document.querySelector(SELECTORS.tabI)
+  const namesErase = tabI.querySelectorAll(SELECTORS.tNames)
+  const imagesErase = tabN.querySelectorAll(SELECTORS.tImage)
+  const names = tabN.querySelectorAll(SELECTORS.tNames)
+  const images = tabI.querySelectorAll(SELECTORS.tImage)
+
+  // Clean items that are not going to be used
   namesErase.forEach((item) => {
     item.remove()
   })
   imagesErase.forEach((item) => {
     item.remove()
   })
-}
-const main = () => {
+
+  // Assigns the 'active' class to the first element
   names[0].classList.toggle(CLASSES.active)
   images[0].classList.toggle(CLASSES.active)
 
@@ -47,5 +54,4 @@ const main = () => {
   })
 }
 
-cleaner()
 main()
