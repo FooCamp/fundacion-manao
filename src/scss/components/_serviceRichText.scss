@@ -3,7 +3,10 @@
 
   color: var(--brand-navy);
   margin: 0;
-  padding-top: 6.4rem;
+
+  &:not(:first-of-type) {
+    padding-top: 6.4rem;
+  }
 }
 
 .richtext_container {
@@ -21,6 +24,18 @@
     color: var(--grey-2);
     margin: 0;
     padding-top: 0.8rem;
+  }
+
+  > ol {
+    padding: 0.8rem 0 0 2rem;
+    margin: 0;
+
+    > li {
+      > p {
+        color: var(--grey-2);
+        @include body-m-reg;
+      }
+    }
   }
 
   > ul {
