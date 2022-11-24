@@ -1,269 +1,3 @@
-.header {
-  background: var(--white);
-  position: sticky;
-  top: 0;
-  z-index: var(--z-index-top);
-
-  &__container {
-    align-items: center;
-    border-bottom: 1px solid var(--grey-6);
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1440px;
-    padding: 2rem 2.4rem;
-    width: 100%;
-  }
-
-  &__logo {
-    width: 112px;
-
-    &__image {
-      width: 100%;
-    }
-  }
-
-  &__menu {
-    background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    left: -100%;
-    padding: 4.8rem 2.4rem;
-    position: fixed;
-    top: 80px;
-    transition: 0.3s;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-
-    &__item {
-      list-style: none;
-      margin: 16px 0;
-    }
-
-    &__item .link {
-      @include body-m-bold;
-
-      color: var(--brand-navy);
-      font-size: 24px;
-      text-decoration: none;
-    }
-
-    &__item:nth-last-child(2) {
-      border-bottom: 1px solid var(--grey-6);
-      margin: 32px 0 48px 0;
-
-      & .link {
-        display: none;
-      }
-    }
-
-    &__donor-info {
-      margin-bottom: 48px;
-
-      &--title {
-        @include heading-5;
-
-        color: var(--brand-navy);
-        margin: 0 0 8px;
-      }
-
-      &--text {
-        @include body-m-reg;
-        margin-bottom: 24px;
-        color: var(--grey-2);
-      }
-      // donation info
-      .modal {
-        display: block;
-        &__image,
-        &__close {
-          display: none;
-        }
-        p {
-          @include body-m-reg;
-          margin: 0;
-          color: var(--grey-2);
-        }
-        h5 {
-          @include heading-5;
-          margin: 0 0 8px 0;
-        }
-        h6 {
-          @include heading-6;
-          color: var(--white);
-          margin: 0;
-        }
-        &__info {
-          padding-bottom: 24px;
-        }
-        &__data {
-          color: var(--white);
-          background-color: var(--brand-navy);
-          border-radius: 24px;
-          padding: 24px;
-          margin-bottom: 24px;
-          p {
-            color: var(--grey-6);
-          }
-
-          .modal__account {
-            border-bottom: 1px solid var(--grey-1);
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            // @include body-m-reg;
-
-            // color: var(--grey-6);
-            // margin: 0;
-          }
-
-          .modal__link {
-            p {
-              color: var(--grey-6);
-              a {
-                color: var(--grey-6);
-                text-decoration: none;
-                border-bottom: 1px solid var(--grey-6);
-              }
-            }
-          }
-        }
-
-        @include breakpoint(md) {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-.hamburger {
-  background-color: var(--white);
-  border: none;
-  display: block;
-  cursor: pointer;
-}
-//remove scroll when open hamburger mobile
-body.lock-scroll {
-  touch-action: none;
-  overflow: hidden;
-
-  @include breakpoint(md) {
-    overflow: auto;
-  }
-}
-
-.bar {
-  background-color: var(--black);
-  display: block;
-  height: 3px;
-  margin: 4px auto;
-  transition: all 0.3s ease-in-out;
-  width: 28px;
-}
-
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.header__menu.active {
-  left: 0;
-}
-
-.donor {
-  &__socials {
-    align-items: center;
-    border-top: 1px solid var(--grey-6);
-    display: flex;
-    gap: 33px;
-    justify-content: center;
-    padding: 24px 0 0;
-
-    &__icons {
-      color: var(--brand-navy);
-      font-size: 2.6rem;
-    }
-  }
-
-  &__socials a {
-    align-items: center;
-    display: flex;
-    height: 32px;
-    justify-content: center;
-    width: 32px;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      opacity: 0.8;
-      transition: all 0.3s ease-in-out;
-    }
-  }
-}
-
-@include breakpoint(md) {
-  .hamburger {
-    display: none;
-  }
-
-  .header {
-    &__container {
-      padding: 2.4rem 4.8rem;
-    }
-
-    &__logo {
-      width: 135px;
-    }
-
-    &__menu {
-      flex-direction: row;
-      gap: 60px;
-      justify-content: end;
-      left: initial;
-      padding: 0;
-      position: relative;
-      transition: none;
-      top: initial;
-      height: unset;
-      overflow: unset;
-
-      &__item {
-        margin: 16px 0;
-      }
-
-      &__item .link {
-        @include link-typography;
-      }
-
-      &__item:nth-last-child(2) {
-        display: contents;
-
-        & .link {
-          @include button-typography;
-
-          align-items: center;
-          animation: 10s ease infinite button-bg-colors;
-          border-radius: 24px;
-          color: var(--white);
-          display: flex;
-          justify-content: center;
-          padding: 1.6rem 3.2rem;
-        }
-      }
-
-      &__donor-info {
-        display: none;
-      }
-    }
-  }
-}
-
 @keyframes button-bg-colors {
   0% {
     background-color: var(--brand-blue);
@@ -307,5 +41,250 @@ body.lock-scroll {
 
   100% {
     background-color: var(--brand-blue);
+  }
+}
+
+// remove scroll when open hamburger mobile
+body.lock-scroll {
+  touch-action: none;
+  overflow: hidden;
+
+  @include breakpoint(md) {
+    overflow: auto;
+  }
+}
+
+.header {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-top);
+
+  .hamburger {
+    background-color: var(--white);
+    border: none;
+    display: block;
+    cursor: pointer;
+
+    &.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active .bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &.active .bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    .bar {
+      background-color: var(--black);
+      display: block;
+      height: 3px;
+      margin: 4px auto;
+      transition: all 0.3s ease-in-out;
+      width: 28px;
+    }
+  }
+
+  &__container {
+    align-items: center;
+    border-bottom: 1px solid var(--grey-6);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 2rem 2.4rem;
+    width: 100%;
+  }
+
+  &__logo {
+    width: 112px;
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    left: -100%;
+    padding: 4.8rem 2.4rem 8rem;
+    position: fixed;
+    top: 80px;
+    transition: 0.3s;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    &.active {
+      left: 0;
+    }
+
+    &__item {
+      list-style: none;
+      margin: 16px 0;
+      .link {
+        @include body-m-bold;
+
+        color: var(--brand-navy);
+        font-size: 24px;
+        text-decoration: none;
+      }
+    }
+
+    &__item:nth-last-child(3) {
+      border-bottom: 1px solid var(--grey-6);
+      margin: 32px 0 48px 0;
+
+      .link {
+        display: none;
+      }
+    }
+
+    &__donation-info {
+      // donation info
+      .modal {
+        display: block;
+        &__image,
+        &__close {
+          display: none;
+        }
+        &__paragraph {
+          @include body-m-reg;
+          margin: 0;
+          color: var(--grey-2);
+        }
+        &__title {
+          @include heading-5;
+          margin: 0 0 8px 0;
+        }
+        &__subtitle {
+          @include heading-6;
+          color: var(--white);
+          margin: 0;
+        }
+        &__info {
+          padding-bottom: 24px;
+        }
+        &__data {
+          color: var(--white);
+          background-color: var(--brand-navy);
+          border-radius: 24px;
+          padding: 24px;
+          margin-bottom: 24px;
+          .modal__paragraph {
+            color: var(--grey-6);
+          }
+
+          .modal__account {
+            border-bottom: 1px solid var(--grey-1);
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+          }
+
+          .modal__link {
+            .modal__paragraph {
+              color: var(--grey-6);
+              .link {
+                color: var(--grey-6);
+                text-decoration: none;
+                border-bottom: 1px solid var(--grey-6);
+              }
+            }
+          }
+        }
+
+        @include breakpoint(md) {
+          display: none;
+        }
+      }
+    }
+
+    &__socials {
+      align-items: center;
+      border-top: 1px solid var(--grey-6);
+      display: flex;
+      gap: 33px;
+      justify-content: center;
+      padding: 24px 48px 24px;
+
+      .link {
+        align-items: center;
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        width: 32px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.8;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .icons {
+        color: var(--brand-navy);
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+// menu on desktop view
+@include breakpoint(md) {
+  .header {
+    .hamburger {
+      display: none;
+    }
+    &__container {
+      padding: 2.4rem 4.8rem;
+    }
+
+    &__logo {
+      width: 135px;
+    }
+
+    &__menu {
+      flex-direction: row;
+      gap: 60px;
+      justify-content: end;
+      left: initial;
+      padding: 0;
+      position: relative;
+      transition: none;
+      top: initial;
+      height: unset;
+      overflow: unset;
+
+      &__item {
+        margin: 16px 0;
+      }
+
+      &__item .link {
+        @include link-typography;
+      }
+
+      &__item:nth-last-child(3) {
+        display: contents;
+
+        .link {
+          @include button-typography;
+
+          align-items: center;
+          animation: 10s ease infinite button-bg-colors;
+          border-radius: 24px;
+          color: var(--white);
+          display: flex;
+          justify-content: center;
+          padding: 1.6rem 3.2rem;
+        }
+      }
+
+      &__donation-info,
+      &__socials {
+        display: none;
+      }
+    }
   }
 }
