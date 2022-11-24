@@ -1,0 +1,19 @@
+.tab-content {
+  &__image {
+    &--img {
+      border-radius: none;
+
+      @include breakpoint(md) {
+        border-radius: 24px;
+      }
+    }
+  }
+
+  &__attributes {
+    // attributes component
+  }
+
+  &__info {
+    // Information product
+  }
+}

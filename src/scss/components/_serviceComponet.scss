@@ -1,6 +1,12 @@
-.service-tabs__wrapper {
+.service {
   @include breakpoint(md) {
     @include grid;
+  }
+
+  &__title {
+    @include breakpoint(md) {
+      @include col(2, 10);
+    }
   }
 }
 
@@ -9,7 +15,7 @@
     @include col(2, 10);
   }
 
-  &__tab--n {
+  &__name {
     display: flex;
     gap: 48px;
     overflow: scroll;
@@ -60,17 +66,9 @@
     }
   }
 
-  &__tab--i {
-    & > .tab__image {
+  &__content {
+    & > .tab__content {
       display: none;
-
-      & img {
-        border-radius: none;
-
-        @include breakpoint(md) {
-          border-radius: 24px;
-        }
-      }
 
       &.sTabActive {
         display: block;
