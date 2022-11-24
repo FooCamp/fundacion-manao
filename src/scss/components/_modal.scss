@@ -56,22 +56,22 @@
     &__description {
       flex: 0 50%;
       padding: 4.8rem 4rem;
-      h5,
-      h6 {
+      .modal__title,
+      .modal__subtitle {
         margin: 0;
       }
-      h5 {
+      .modal__title {
         @include heading-5;
       }
-      h6 {
+      .modal__subtitle {
         @include heading-6;
       }
-      p {
+      .modal__paragraph {
         @include body-m-reg;
         color: var(--grey-1);
         margin-bottom: 0;
       }
-      a {
+      .link {
         color: var(--grey-1);
         display: inline-block;
         transition: var(--transition);
@@ -96,7 +96,7 @@
       border-bottom: 0.1rem solid var(--grey-6);
       padding-bottom: 3rem;
       margin-top: 3.2rem;
-      p {
+      .paragraph {
         margin-top: 0;
       }
     }
