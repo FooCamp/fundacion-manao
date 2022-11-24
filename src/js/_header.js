@@ -15,6 +15,12 @@ const SELECTORS = {
 
 const main = () => {
   const hamburger = document.querySelector(SELECTORS.hamburger)
+
+  // conditional to prevent error when component is missing
+  if (!hamburger) {
+    return
+  }
+
   const navMenu = document.querySelector(SELECTORS.navMenu)
   const body = document.querySelector(SELECTORS.body)
   const link = document.querySelectorAll(SELECTORS.link)

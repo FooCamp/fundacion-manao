@@ -1,3 +1,9 @@
-{{#each title}}
-{{{module this}}}
-{{/each}}
+<p class='container__attribute-section--title container__attribute-section--box'>{{title}}
+
+</p>
+
+{{#each values}}
+
+    <p class='container__attribute-section--value container__attribute-section--box'>{{{this}}}</p>
+      {{/each}}
+
