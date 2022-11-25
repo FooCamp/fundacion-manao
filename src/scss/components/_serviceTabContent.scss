@@ -1,5 +1,7 @@
 .tab-content {
   &__image {
+    display: block;
+
     &--img {
       border-radius: none;
 
@@ -14,6 +16,6 @@
   }
 
   &__info {
-    // Information product
+    // Information product component
   }
 }

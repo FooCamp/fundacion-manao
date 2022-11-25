@@ -1,19 +1,40 @@
 <section class="service">
-  <div class="service__title">
-    <h1 class="heading-1">
-      {{title}}
-    </h1>
-  </div>
-  <div class="service-tabs">
-    <div class="service-tabs__name">
-        {{#each tabsName}}
-        <button class="tab__name" data-index="{{@index}}">{{this}}</button>
-        {{/each}}
+
+    <div class="service__shape">
+      <img src="/images/sevice_shape_{{serviceColor}}.svg" alt="" role="presentation">
     </div>
-    <div class="service-tabs__content">
-        {{#each tabsContent}}
-        <div class="tab__content" data-index="{{@index}}">{{{module this}}}</div>
-        {{/each}}
+
+  <div class="service__wrapper">
+
+    <div class="service__title">
+      <span class="service__title__text color--{{serviceColor}}">
+        {{title}}
+      </span>
     </div>
+
+    <div class="service-tabs">
+
+      <div class="service-tabs__name">
+          {{#each tabsName}}
+          <button class="tab__name" data-index="{{@index}}">{{this}}</button>
+          {{/each}}
+      </div>
+
+      <div class="service-tabs__content">
+          {{#each tabsContent}}
+          <div class="tab__content" data-index="{{@index}}">{{{module this}}}</div>
+          {{/each}}
+      </div>
+
+    </div>
+
   </div>
+
+{{!-- This style assigns to a global variable the value of "serviceColor" to invoke the respective color of the service --}}
+{{!-- Use the variable "--actual-color" where you need to reference the color of the service that comes from contentful --}}
+<style>
+:root{--atual-color: var(--brand-{{serviceColor}})}
+</style>
+
 </section>
+1

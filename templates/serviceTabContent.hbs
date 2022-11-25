@@ -1,9 +1,16 @@
 <div class="tab-content__image">
   <img src="{{assetSrc tabImage}}" class="tab-content__image--img" alt="" role="presentation">
 </div>
-<div class="tab-content__attributes">
-  {{!-- area for attribute component --}}
-</div>
+
+{{#if tabAttributes}}
+  <div class="tab-content__attributes">
+    {{{module tabAttributes}}}
+  </div>
+{{/if}}
+
 <div class="tab-content__info">
-  {{!-- area for information componet --}}
+  {{#each content}}
+    {{{module this}}}
+  {{/each}}
 </div>
+

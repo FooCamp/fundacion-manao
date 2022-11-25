@@ -11,6 +11,9 @@ const SELECTORS = {
 if (window.matchMedia('(min-width: 1024px)').matches) {
   const main = () => {
     const btnModal = document.querySelectorAll(SELECTORS.openModal)
+    if (btnModal.length == 0) {
+      return
+    }
     const openModal = btnModal[btnModal.length - 1]
     const modal = document.querySelector(SELECTORS.modal)
     const modalBg = document.querySelector(SELECTORS.modalBg)
