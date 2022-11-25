@@ -1,0 +1,27 @@
+{{!-- Donation info modal --}}
+<section class="modal">
+        <div class="modal__background"></div>
+        <div class="modal__content">
+            <div class="modal__image">
+              <img src="{{assetSrc image}}" alt="{{assetTitle image}}">
+            </div>
+            <div class="modal__description">
+              <div class="modal__info">
+                <h5 class="modal__title">{{title}}</h5>
+                <p class="modal__paragraph">{{description}}</p>
+              </div>
+              <div class="modal__data">
+                <div class="modal__account">
+                  <h6 class="modal__subtitle">{{bankName}}</h6>
+                  <p class="modal__paragraph">{{accountType}}</br>{{accountNumber}}</p>
+                </div>
+                <div class="modal__link">
+                    {{#if vakiInfo}}
+                    {{{module vakiInfo}}}
+                    {{/if}}
+                </div>
+              </div>
+            </div>
+            <button class="modal__close"></button>
+        </div>
+</section>
