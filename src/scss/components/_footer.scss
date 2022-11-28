@@ -1,0 +1,14 @@
+.container {
+  @include grid;
+
+  position: relative;
+  display: block;
+  z-index: 1;
+
+  &__title {
+    background-color: var(--brand-navy);
+
+    @include breakpoint(md) {
+    }
+  }
+}
