@@ -1,14 +1,60 @@
-.container {
-  @include grid;
+.footer {
+  background-color: var(--brand-navy);
 
-  position: relative;
-  display: block;
-  z-index: 1;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--grey-1);
+    padding-bottom: 3.2rem;
+  }
 
-  &__title {
-    background-color: var(--brand-navy);
+  &__logo-img {
+    width: 13rem;
+    height: 4.6rem;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+    background-image: url('/static/images/LogoManaoWhite.svg');
+  }
+
+  @include breakpoint(md) {
+  }
+
+  &__items-container {
+    @include grid;
+
+    padding: 4rem 0;
 
     @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
     }
+  }
+
+  &__item {
+    @include col(2, 6);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4.8rem;
+    margin: 0;
+    color: var(--white);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.2rem;
+
+    @include breakpoint(md) {
+      grid-column: auto;
+      padding: 0;
+    }
+  }
+
+  &__disclaimer {
+    @include body-s-reg;
+
+    background-color: var(--grey-1);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 2.4rem 0;
   }
 }

@@ -1,15 +1,16 @@
-<section class="footer_container">
-	<div class="footer__title">
-    <img src="" class="logo" </img>
-    <h2 class="footer__title">{{title}}</h2>
+<section class="footer">
+	<div class="footer__logo">
+    <div class="footer__logo-img"></div>
   </div>
-  <div class="footer__items">
-			{{#each statisticsList}}
-				{{{module this}}}
-			{{/each}}
+  <div class="footer__items-container">
+    {{#each sections}}
+      {{{module this}}}
+    {{/each}}
 	</div>
   <div class="footer__disclaimer">
-    <p class=" "></p>
+    <span>
+      {{disclaimer}}
+    </span>
 	</div>
 </section>
 
