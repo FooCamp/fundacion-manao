@@ -13,6 +13,11 @@ const SELECTORS = {
 const main = () => {
   const carousels = document.querySelectorAll(SELECTORS.carousel)
 
+  // conditional to prevent error when component is missing
+  if (carousels.length == 0) {
+    return
+  }
+
   carousels.forEach((item) => {
     const indicators = item.querySelectorAll(SELECTORS.indicators)
     const card = item.querySelectorAll(SELECTORS.card)

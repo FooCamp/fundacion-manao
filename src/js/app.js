@@ -1,5 +1,7 @@
 import '../scss/main.scss'
+import './_servicesTab'
 import './_hero'
 import './_carousel'
 import './_header'
 import './_aboutus'
+import './_modal'

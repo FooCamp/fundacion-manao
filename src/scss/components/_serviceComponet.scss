@@ -1,0 +1,106 @@
+.service {
+  position: relative;
+
+  &__shape {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 250px;
+    z-index: -1;
+
+    @include breakpoint(md) {
+      top: -96px;
+      width: auto;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 112px;
+
+    @include breakpoint(md) {
+      @include grid;
+
+      padding-top: 80px;
+    }
+  }
+
+  &__title {
+    @include heading-4;
+
+    margin: 0 0 40px 24px;
+
+    @include breakpoint(md) {
+      @include col(2, 10);
+      @include heading-1;
+
+      margin: 0 0 40px;
+    }
+  }
+}
+
+.service-tabs {
+  @include breakpoint(md) {
+    @include col(2, 10);
+  }
+
+  &__name {
+    display: flex;
+    gap: 48px;
+    overflow: scroll;
+    border-bottom: 1px solid var(--grey-5);
+    padding-bottom: 24px;
+    margin: 0 0 32px 24px;
+
+    // hide scroll bar
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include breakpoint(md) {
+      margin: 0 0 32px;
+    }
+
+    & > .tab__name {
+      @include body-xl-reg;
+
+      background-color: transparent;
+      border: none;
+      color: var(--brand-navy);
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 24px;
+      }
+
+      &.sTabActive {
+        @include body-xl-bold;
+
+        position: relative;
+
+        &::after {
+          background: var(--atual-color);
+          border-radius: 2px;
+          bottom: -24px;
+          content: ' ';
+          display: block;
+          height: 8px;
+          left: 0;
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &__content {
+    & > .tab__content {
+      display: none;
+
+      &.sTabActive {
+        display: block;
+      }
+    }
+  }
+}

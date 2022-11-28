@@ -1,1 +1,11 @@
-<a class="link" href="{{url}}" target="{{#if isExternal}}_blank{{else}}_self{{/if}}" aria-label="Go to {{label}} link">{{label}}</a>
+<a class="link {{#if iconType}}link__icon-container{{/if}}" href="{{url}}" target="{{#if isExternal}}_blank{{else}}_self{{/if}}" aria-label="Go to {{#if label}}{{label}}{{else}}{{iconType}}{{/if}} link">
+  {{#if label}}
+    {{label}}
+  {{/if}}
+
+  {{#unless label}}
+    {{#if iconType}}
+      <i class="fa fa-{{iconType}} link__icon"></i>
+    {{/if}}
+  {{/unless}}
+</a>

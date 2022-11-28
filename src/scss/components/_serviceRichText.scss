@@ -1,0 +1,53 @@
+.richtext_title {
+  @include heading-4;
+
+  color: var(--brand-navy);
+  margin: 0;
+
+  &:not(:first-of-type) {
+    padding-top: 6.4rem;
+  }
+}
+
+.richtext_container {
+  > h3 {
+    @include heading-5;
+
+    color: var(--brand-navy);
+    margin: 0;
+    padding-top: 1.6rem;
+  }
+
+  > p {
+    @include body-m-reg;
+
+    color: var(--grey-2);
+    margin: 0;
+    padding-top: 0.8rem;
+  }
+
+  > ol {
+    padding: 0.8rem 0 0 2rem;
+    margin: 0;
+
+    > li {
+      > p {
+        color: var(--grey-2);
+        @include body-m-reg;
+      }
+    }
+  }
+
+  > ul {
+    list-style-type: disc;
+    padding-top: 0.8rem;
+    margin: 0 0 0 2rem;
+
+    > li {
+      > p {
+        color: var(--grey-2);
+        @include body-m-reg;
+      }
+    }
+  }
+}
