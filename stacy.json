@@ -1,4 +1,5 @@
 {
   "$schema": "./node_modules/stacy/lib/config-schema.json",
-  "siteId": "fundacion-manao"
+  "siteId": "fundacion-manao",
+  "maxModuleDepth": 10
 }
