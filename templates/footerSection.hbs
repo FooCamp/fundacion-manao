@@ -1,4 +1,7 @@
 <div class="footer__item">
-  <span class="footer__title">{{title}} </span>
-  <span class="footer__link">{{icon}}</span>
+   <div class="__iconContainer">
+    <span class="footer__icon">{{{icon}}}</span>
+  </div>
+   <span class="footer__title">{{title}} </span>
+   <span class="footer__link">{{#each linkInformation}}{{{module this}}}{{/each}}</span>
 </div>
