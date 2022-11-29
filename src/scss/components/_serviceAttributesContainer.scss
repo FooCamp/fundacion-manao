@@ -1,14 +1,10 @@
 .attributes-wrapper {
   // Mobile
-  @include grid;
 
   .container {
-    @include col(auto, 8);
-
     background-color: var(--brand-navy);
     width: 32.7rem;
     height: 45.6rem;
-    margin-top: 65rem;
     border-radius: 2.4rem;
 
     &__attribute-section {
