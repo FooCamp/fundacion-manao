@@ -1,5 +1,7 @@
 <div class="footer__item">
-   <img class="footer__icon" src="{{assetSrc icon}}">
-   <span class="footer__title">{{title}} </span>
-   <span class="footer__link footer__link--{{title}}">{{#each linkInformation}}{{{module this}}}{{/each}}</span>
+   <div class="footer__icon">
+     <img class="footer__icon--image" src="{{assetSrc icon}}" role="presentation" alt="Icon of {{title}}">
+   </div>
+   <div class="footer__title">{{title}} </div>
+   <div class="footer__link footer__link--{{title}}">{{#each linkInformation}}{{{module this}}}{{/each}}</div>
 </div>

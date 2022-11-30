@@ -1,67 +1,90 @@
 .footer {
+  margin-top: 8rem;
   background-color: var(--brand-navy);
+  @include breakpoint(md) {
+    margin-top: 18rem;
+  }
 
   &__logo {
-    display: flex;
-    justify-content: center;
     border-bottom: 1px solid var(--grey-1);
+    margin: 0 auto;
+    width: 100%;
   }
 
   &__logo-img {
-    width: 13rem;
     height: 4.6rem;
     margin-top: 3.2rem;
     margin-bottom: 3.2rem;
-    background-image: url('/static/images/LogoManaoWhite.svg');
-  }
-
-  @include breakpoint(md) {
   }
 
   &__items-container {
-    @include grid;
-
     padding: 4rem 0;
     color: var(--white);
+    width: 100%;
+    margin: 0 auto;
 
     @include breakpoint(md) {
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      max-width: 1440px;
+      justify-content: space-between;
+      column-gap: 48px;
     }
-  }
-
-  &__item {
-    @include col(2, 6);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 4.8rem;
-    margin: 0;
-    color: var(--white);
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    letter-spacing: 0.2rem;
-
-    @include breakpoint(md) {
-      grid-column: auto;
-      padding: 0;
-    }
-  }
-
-  &__icon {
-    height: 4.6rem;
-    width: 4.7rem;
-    color: var(--grey-2);
   }
 
   &__link {
     text-align: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
 
-    a {
+    @include body-m-reg;
+
+    & > a {
       color: var(--grey-4);
     }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4.8rem;
+    margin: 0;
+    color: var(--white);
+
+    &:last-child > .footer__link {
+      flex-direction: row;
+      gap: 8px;
+
+      & > .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--grey-1);
+        color: var(--white);
+
+        & > i {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    height: 56px;
+    width: 56px;
+    padding: 5px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    @include body-s-bold;
+
+    font-size: 1.2rem;
+    margin-bottom: 8px;
   }
 
   &__disclaimer {
@@ -72,5 +95,7 @@
     display: flex;
     justify-content: center;
     padding: 2.4rem 0;
+
+    @include col(1, 13);
   }
 }
