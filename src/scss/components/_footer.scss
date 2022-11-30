@@ -48,16 +48,20 @@
     }
   }
 
-  &__iconContainer {
-    padding-top: 4.5rem;
-    height: 6.6rem;
-    width: 5.6rem;
-  }
-
   &__icon {
     height: 4.6rem;
     width: 4.7rem;
-    columns: var(--white);
+    color: var(--grey-2);
+  }
+
+  &__link {
+    text-align: center;
+    align-items: center;
+    display: flex;
+
+    a {
+      color: var(--grey-4);
+    }
   }
 
   &__disclaimer {
