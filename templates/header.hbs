@@ -34,15 +34,9 @@
       </div>
 
       <div class="header__menu__socials">
-          <a class="link" href="http://www.facebook.com">
-            <i class="icons fa fa-facebook-f"></i>
-          </a>
-          <a class="link" href="http://www.instagram.com">
-            <i class="icons fa fa-instagram"></i>
-          </a>
-          <a class="link" href="http://www.youtube.com">
-            <i class="icons fa fa fa-youtube-play"></i>
-          </a>
+        {{#each socialLinks}}
+        {{{module this}}}
+        {{/each}}
       </div>
 
     </ul>

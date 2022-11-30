@@ -2,6 +2,7 @@
   <img src="{{assetSrc tabImage}}" class="tab-content__image--img" alt="" role="presentation">
 </div>
 
+<div class="tab-content__container">
 {{#if tabAttributes}}
   <div class="tab-content__attributes">
     {{{module tabAttributes}}}
@@ -12,5 +13,6 @@
   {{#each content}}
     {{{module this}}}
   {{/each}}
+</div>
 </div>
 
