@@ -1,0 +1,16 @@
+<footer class="footer">
+	<div class="footer__logo">
+    <img class="footer__logo-img" src="/images/LogoManaoWhite.svg"/>
+  </div>
+  <div class="footer__items-container">
+    {{#each sections}}
+      {{{module this}}}
+    {{/each}}
+	</div>
+  <div class="footer__disclaimer">
+    <span>
+      {{disclaimer}}
+    </span>
+	</div>
+</footer>
+
