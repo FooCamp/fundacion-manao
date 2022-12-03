@@ -67,6 +67,15 @@ body.lock-scroll {
     display: block;
     cursor: pointer;
 
+    .bar {
+      background-color: var(--black);
+      display: block;
+      height: 0.3rem;
+      margin: 0.4rem auto;
+      transition: all 0.3s ease-in-out;
+      width: 2.8rem;
+    }
+
     &.active .bar:nth-child(2) {
       opacity: 0;
     }
@@ -77,14 +86,6 @@ body.lock-scroll {
 
     &.active .bar:nth-child(3) {
       transform: translateY(-0.7rem) rotate(-45deg);
-    }
-    .bar {
-      background-color: var(--black);
-      display: block;
-      height: 0.3rem;
-      margin: 0.4rem auto;
-      transition: all 0.3s ease-in-out;
-      width: 2.8rem;
     }
   }
 
@@ -118,6 +119,7 @@ body.lock-scroll {
     width: 100%;
     height: 100vh;
     overflow: auto;
+
     &.active {
       left: 0;
     }
@@ -125,6 +127,7 @@ body.lock-scroll {
     &__item {
       list-style: none;
       margin: 1.6rem 0;
+
       .link {
         @include body-m-bold;
 
@@ -136,7 +139,7 @@ body.lock-scroll {
 
     &__item:nth-last-child(3) {
       border-bottom: 0.1rem solid var(--grey-6);
-      margin: 3.2rem 0 4.8rem 0;
+      margin: 3.2rem 0 4.8rem;
 
       .link {
         display: none;
@@ -147,33 +150,43 @@ body.lock-scroll {
       // donation info
       .modal {
         display: block;
+
         &__image,
         &__close {
           display: none;
         }
+
         &__paragraph {
           @include body-m-reg;
+
           margin: 0;
           color: var(--grey-2);
         }
+
         &__title {
           @include heading-5;
-          margin: 0 0 0.8rem 0;
+
+          margin: 0 0 0.8rem;
         }
+
         &__subtitle {
           @include heading-6;
+
           color: var(--white);
           margin: 0;
         }
+
         &__info {
           padding-bottom: 2.4rem;
         }
+
         &__data {
           color: var(--white);
           background-color: var(--brand-navy);
           border-radius: 2.4rem;
           padding: 2.4rem;
           margin-bottom: 2.4rem;
+
           .modal__paragraph {
             color: var(--grey-6);
           }
@@ -187,6 +200,7 @@ body.lock-scroll {
           .modal__link {
             .modal__paragraph {
               color: var(--grey-6);
+
               .link {
                 color: var(--grey-6);
                 text-decoration: none;
@@ -208,25 +222,7 @@ body.lock-scroll {
       display: flex;
       gap: 3.5rem;
       justify-content: center;
-      padding: 2.4rem 4.8rem 2.4rem;
-
-      .link {
-        font-size: 2.6rem;
-        align-items: center;
-        display: flex;
-        height: 3.2rem;
-        justify-content: center;
-        width: 3.2rem;
-        transition: all 0.3s ease-in-out;
-        color: var(--brand-navy);
-        &:hover {
-          opacity: 0.8;
-          transition: all 0.3s ease-in-out;
-        }
-        .fa-youtube::before {
-          content: '\f16a';
-        }
-      }
+      padding: 2.4rem 4.8rem;
     }
   }
 }
@@ -237,6 +233,7 @@ body.lock-scroll {
     .hamburger {
       display: none;
     }
+
     &__container {
       padding: 2.4rem 4.8rem;
     }
@@ -270,6 +267,7 @@ body.lock-scroll {
 
         .link {
           @include button-typography;
+
           align-items: center;
           animation: 10s ease infinite button-bg-colors;
           border-radius: 10rem;
@@ -279,6 +277,7 @@ body.lock-scroll {
           padding: 1.6rem 3.2rem;
         }
       }
+
       &__donation-info,
       &__socials {
         display: none;
