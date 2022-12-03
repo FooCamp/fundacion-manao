@@ -108,6 +108,54 @@
     }
   }
 
+  &__card-content {
+    height: auto;
+
+    @include breakpoint(md) {
+      flex: 1;
+    }
+
+    &__text {
+      @include body-xl-reg;
+
+      font-size: 2.8rem;
+      margin-bottom: 24px;
+
+      @include breakpoint(md) {
+        @include heading-2;
+
+        margin-bottom: 32px;
+      }
+    }
+
+    &__cta {
+      border: 0;
+      border-radius: 50px;
+      padding: 20px 32px;
+      text-align: center;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    &__cta .link {
+      @include button-typography;
+
+      color: var(--white);
+    }
+
+    &__image {
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      object-fit: cover;
+
+      @include breakpoint(md) {
+        &--wrapper {
+          flex: 1;
+        }
+      }
+    }
+  }
+
   &__cards {
     display: flex;
     gap: 24px;
@@ -156,6 +204,7 @@
       display: flex;
       flex-direction: column-reverse;
       gap: 24px;
+      justify-content: flex-end;
       max-width: 80%;
       min-width: 80%;
       scroll-snap-align: start;
@@ -164,8 +213,8 @@
       &:last-child {
         margin-right: 20%;
       }
+
       @include breakpoint(md) {
-        // display: none;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
@@ -187,57 +236,28 @@
     }
 
     & .card-active {
+      & .hero__card-content {
+        &__text {
+          @include body-xl-bold;
+
+          font-size: 2.8rem;
+
+          @include breakpoint(md) {
+            @include heading-2;
+          }
+        }
+
+        &__cta {
+          opacity: 1;
+        }
+      }
+
       @include breakpoint(md) {
         opacity: 1;
         display: flex;
         position: relative;
         top: 0;
       }
-    }
-  }
-}
-
-.hero__card-content {
-  height: auto;
-
-  @include breakpoint(md) {
-    flex: 1;
-  }
-
-  &__text {
-    @include body-xl-bold;
-
-    font-size: 2.8rem;
-    margin-bottom: 24px;
-
-    @include breakpoint(md) {
-      @include heading-2;
-
-      margin-bottom: 32px;
-    }
-  }
-
-  &__cta {
-    border: 0;
-    border-radius: 50px;
-    padding: 20px 32px;
-    text-align: center;
-  }
-
-  &__cta .link {
-    @include button-typography;
-
-    color: var(--white);
-  }
-
-  &__image {
-    aspect-ratio: 1 / 1;
-    border-radius: 24px;
-    flex: 1;
-    object-fit: cover;
-
-    @include breakpoint(md) {
-      min-width: 450px;
     }
   }
 }
@@ -284,7 +304,10 @@
       left: 0;
       position: absolute;
       right: 0;
-      background: var(--white);
+      background: var(--grey-6);
+      @include breakpoint(md) {
+        background: transparent;
+      }
     }
 
     @include breakpoint(md) {
